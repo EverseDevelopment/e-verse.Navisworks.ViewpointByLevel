@@ -21,7 +21,6 @@
                             ShowText="True"
                             Text="Button_1"
                             Orientation="Vertical"/>
-
             </RibbonPanelSource>
         </RibbonPanel>
     </RibbonTab>

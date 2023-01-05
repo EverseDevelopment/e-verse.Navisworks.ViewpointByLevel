@@ -7,8 +7,8 @@
     <ProjectGuid>{944D393F-9BB3-4C5F-9566-BAAA4745A2CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EVerse.Navisworks.VPByLevel</RootNamespace>
-    <AssemblyName>EVerse.Navisworks.VPByLevel.2019</AssemblyName>
+    <RootNamespace>EVerse.Navisworks.Plugin</RootNamespace>
+    <AssemblyName>EVerse.Navisworks.Plugin.2019</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

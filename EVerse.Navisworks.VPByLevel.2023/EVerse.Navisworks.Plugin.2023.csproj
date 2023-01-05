@@ -7,8 +7,8 @@
     <ProjectGuid>{37B80542-76C6-4592-A84E-B5F45D7150F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EVerse.Navisworks.VPByLevel</RootNamespace>
-    <AssemblyName>EVerse.Navisworks.VPByLevel.2023</AssemblyName>
+    <RootNamespace>EVerse.Navisworks.Plugin</RootNamespace>
+    <AssemblyName>EVerse.Navisworks.Plugin.2023</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -80,5 +80,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\EVerse.Navisworks.VPByLevel.Common\EVerse.Navisworks.VPByLevel.Common.projitems" Label="Shared" />
+  <Import Project="..\EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

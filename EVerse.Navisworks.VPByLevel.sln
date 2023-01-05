@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.20
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2023", "EVerse.Navisworks.VPByLevel.2023\EVerse.Navisworks.Plugin.2023.csproj", "{37B80542-76C6-4592-A84E-B5F45D7150F2}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EVerse.Navisworks.Plugin.ViewpointByLevel", "EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.shproj", "{5ED8382C-9B17-416F-B414-AF8327B6C6E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EVerse.Navisworks.VPByLevel.Common\EVerse.Navisworks.VPByLevel.Common.projitems*{0e931c02-2355-451e-97b5-7f43ff8d2145}*SharedItemsImports = 13
+		EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems*{37b80542-76c6-4592-a84e-b5f45d7150f2}*SharedItemsImports = 4
 		EVerse.Navisworks.VPByLevel.Common\EVerse.Navisworks.VPByLevel.Common.projitems*{37b80542-76c6-4592-a84e-b5f45d7150f2}*SharedItemsImports = 4
+		EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems*{5ed8382c-9b17-416f-b414-af8327b6c6e2}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
