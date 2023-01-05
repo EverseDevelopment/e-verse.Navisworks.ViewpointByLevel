@@ -8,4 +8,21 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>EVerse.Navisworks.VPByLevel.Common</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)en-US\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)clipPlaneTemplate.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\VL_32.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\XR_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)en-US\PluginRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)PluginRibbon.cs" />
+  </ItemGroup>
 </Project>
