@@ -119,7 +119,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\EVerse.Navisworks.Plugin.Common\EVerse.Navisworks.VPByLevel.Common.projitems" Label="Shared" />
+  <Import Project="..\EVerse.Navisworks.Plugin.Common\EVerse.Navisworks.Plugin.Common.projitems" Label="Shared" />
   <Import Project="..\EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

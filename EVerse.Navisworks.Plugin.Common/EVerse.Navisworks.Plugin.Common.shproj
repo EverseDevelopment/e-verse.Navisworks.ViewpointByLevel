@@ -8,6 +8,25 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.Default.props" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.props" />
   <PropertyGroup />
+  <ItemGroup>
+    <Page Include="en-US\PluginRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\CommonCommandHandlerPlugin.cs" />
+    <Compile Include="Application\IndentityInformation.cs" />
+    <Compile Include="PluginRibbon.cs" />
+    <Compile Include="Utils\PluginBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clipPlaneTemplate.txt" />
+    <Content Include="Images\VL_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EVerse.Navisworks.Plugin.Common.projitems" />
+  </ItemGroup>
   <Import Project="EVerse.Navisworks.VPByLevel.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
 </Project>
