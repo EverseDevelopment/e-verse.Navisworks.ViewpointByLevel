@@ -1,4 +1,5 @@
-﻿using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
+﻿using Autodesk.Navisworks.Api;
+using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,6 +43,15 @@ namespace EVerse.Navisworks.Plugin
         private void Close_Button(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
+        }
+        public void CreateViewpoint(string elev, string displayName, View aView)
+        {
+            Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+            aView.TrySetClippingPlanes(elev);
+            Console.Write(elev + Environment.NewLine);
+            SavedViewpoint newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
+            newViewpoint.DisplayName = displayName;
+            oDoc.SavedViewpoints.AddCopy(newViewpoint);
         }
     }
 }

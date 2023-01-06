@@ -14,41 +14,34 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel
         public override int Execute(params string[] parameters)
         {
             Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
-            var AView = oDoc.ActiveView;
+            View aView = oDoc.ActiveView;
 
-            GridSystemCollection GSystems = oDoc.Grids.Systems;
-            Tools.GridSystems gs = new Tools.GridSystems(GSystems);
+            GridSystemCollection gSystems = oDoc.Grids.Systems;
+            Tools.GridSystems gs = new Tools.GridSystems(gSystems);
 
-            ViewpointByLevelWindow thisForm = new ViewpointByLevelWindow();
+            ViewpointByLevelWindow viewpointByLevelWindow = new ViewpointByLevelWindow();
 
-            thisForm.FillModels(gs);
-            thisForm.ShowDialog();
+            viewpointByLevelWindow.FillModels(gs);
+            viewpointByLevelWindow.ShowDialog();
             //Exit plugin if user clicks cancel
-            if (thisForm.DialogResult == false)
+            if (viewpointByLevelWindow.DialogResult == false)
             { return 0; }
 
             //If user selects Apply create viewpoints
-            if (thisForm.DialogResult == true)
+            if (viewpointByLevelWindow.DialogResult == true)
             {
                 using (Transaction t = new Transaction(oDoc, "Cutting Planes"))
                 {
                     //Offset for level
                     double offset = Tools.CutOffset;
                     //Model Origin
-                    var originZ = GSystems.FirstOrDefault().Origin.Z;
+                    double originZ = gSystems.FirstOrDefault().Origin.Z;
 
-                    foreach (var level in GSystems[Tools.SelectedSystem].Levels)
+                    foreach (GridLevel level in gSystems[Tools.SelectedSystem].Levels)
                     {
-                        var elev = jview((-originZ - level.Elevation - offset).ToString());
-
-                        AView.TrySetClippingPlanes(elev);
-
-                        Console.Write(elev + Environment.NewLine);
-                        var newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
-                        newViewpoint.DisplayName = level.DisplayName;
-                        oDoc.SavedViewpoints.AddCopy(newViewpoint);
+                        string elev = jview((-originZ - level.Elevation - offset).ToString());
+                        viewpointByLevelWindow.CreateViewpoint(elev, level.DisplayName, aView);
                     }
-
                     t.Commit();
                 }
             }
