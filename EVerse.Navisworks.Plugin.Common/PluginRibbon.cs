@@ -11,7 +11,7 @@ namespace EVerse.Navisworks.Plugin.Common
 {
     [Plugin("VPByLevelRibbon", "EVS", DisplayName ="Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
-    [RibbonTab("Viewpoint by Level")]
+    [RibbonTab("VPByLevel")]
     [Command("ID_Button_1", LargeIcon ="VL_32.png", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
     class PluginRibbon : CommonCommandHandlerPlugin
     {

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EVerse.Navisworks.Plugin</RootNamespace>
-    <AssemblyName>EVerse.Navisworks.Plugin.2020</AssemblyName>
+    <AssemblyName>EVerse.Navisworks.Plugin</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

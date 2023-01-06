@@ -7,11 +7,11 @@ using System.Linq;
 
 namespace EVerse.Navisworks.Plugin.ViewpointByLevel
 {
-    [PluginAttribute("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoints by Level", DisplayName = "Viewpoints by Level")]
+    [Plugin("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoints by Level", DisplayName = "Viewpoints by Level")]
     //[AddInPluginAttribute(AddInLocation.None)]
-    public class ViewpointByLevelPlugin : AddInPlugin
+    public class ViewpointByLevelPlugin : CustomPlugin
     {
-        public override int Execute(params string[] parameters)
+        public int Execute(params string[] parameters)
         {
             Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
             View aView = oDoc.ActiveView;
