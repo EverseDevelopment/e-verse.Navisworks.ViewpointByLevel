@@ -11,5 +11,14 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Tools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelWindow.xaml.cs">
+      <DependentUpon>ViewpointByLevelWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)ViewpointByLevelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
