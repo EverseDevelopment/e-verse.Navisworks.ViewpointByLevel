@@ -6,16 +6,35 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EVerse.Navisworks.Plugin.Common", "EVerse.Navisworks.VPByLevel.Common\EVerse.Navisworks.Plugin.Common.shproj", "{0E931C02-2355-451E-97B5-7F43FF8D2145}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2022", "EVerse.Navisworks.VPByLevel.2022\EVerse.Navisworks.Plugin.2022.csproj", "{4B97B73B-9157-4483-9269-B36FC42EAFF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{053472A7-30BB-4A3B-84BB-FB4E51EC2290} = {053472A7-30BB-4A3B-84BB-FB4E51EC2290}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2021", "EVerse.Navisworks.VPByLevel.2021\EVerse.Navisworks.Plugin.2021.csproj", "{EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{053472A7-30BB-4A3B-84BB-FB4E51EC2290} = {053472A7-30BB-4A3B-84BB-FB4E51EC2290}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2019", "EVerse.Navisworks.VPByLevel.2019\EVerse.Navisworks.Plugin.2019.csproj", "{944D393F-9BB3-4C5F-9566-BAAA4745A2CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{053472A7-30BB-4A3B-84BB-FB4E51EC2290} = {053472A7-30BB-4A3B-84BB-FB4E51EC2290}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2020", "EVerse.Navisworks.VPByLevel.2020\EVerse.Navisworks.Plugin.2020.csproj", "{0D87A374-3B89-400E-9202-CAFF0B845936}"
+	ProjectSection(ProjectDependencies) = postProject
+		{053472A7-30BB-4A3B-84BB-FB4E51EC2290} = {053472A7-30BB-4A3B-84BB-FB4E51EC2290}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2018", "EVerse.Navisworks.VPByLevel.2018\EVerse.Navisworks.Plugin.2018.csproj", "{053472A7-30BB-4A3B-84BB-FB4E51EC2290}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVerse.Navisworks.Plugin.2023", "EVerse.Navisworks.VPByLevel.2023\EVerse.Navisworks.Plugin.2023.csproj", "{37B80542-76C6-4592-A84E-B5F45D7150F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{053472A7-30BB-4A3B-84BB-FB4E51EC2290} = {053472A7-30BB-4A3B-84BB-FB4E51EC2290}
+		{0D87A374-3B89-400E-9202-CAFF0B845936} = {0D87A374-3B89-400E-9202-CAFF0B845936}
+		{4B97B73B-9157-4483-9269-B36FC42EAFF7} = {4B97B73B-9157-4483-9269-B36FC42EAFF7}
+		{944D393F-9BB3-4C5F-9566-BAAA4745A2CA} = {944D393F-9BB3-4C5F-9566-BAAA4745A2CA}
+		{EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD} = {EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD}
+	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EVerse.Navisworks.Plugin.ViewpointByLevel", "EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.shproj", "{5ED8382C-9B17-416F-B414-AF8327B6C6E2}"
 EndProject

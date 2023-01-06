@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EVerse.Navisworks.VPByLevel.2020")]
+[assembly: AssemblyTitle("EVerse.Navisworks.Plugin.2020")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EVerse.Navisworks.VPByLevel.2020")]
+[assembly: AssemblyProduct("EVerse.Navisworks.Plugin.2020")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

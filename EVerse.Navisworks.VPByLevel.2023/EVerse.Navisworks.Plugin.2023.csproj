@@ -125,4 +125,19 @@
   <Import Project="..\EVerse.Navisworks.VPByLevel.Common\EVerse.Navisworks.VPByLevel.Common.projitems" Label="Shared" />
   <Import Project="..\EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2023\en-US"
+mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2023\Images"
+
+copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\Images"
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\en-US"
+
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\PackageContents.xml" "$(SolutionDir)$(SolutionName).bundle"
+
+if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
+mkdir "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
+
+xcopy /e /s /h "$(SolutionDir)\$(SolutionName).bundle" "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
