@@ -1,18 +1,7 @@
 ﻿using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EVerse.Navisworks.Plugin
 {
@@ -25,10 +14,34 @@ namespace EVerse.Navisworks.Plugin
         {
             InitializeComponent();
         }
+
+        private void Apply_Button(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Tools.CutOffset = Convert.ToDouble(textBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Error with offset" + Environment.NewLine + "Using 1");
+                Tools.CutOffset = 1;
+            }
+            this.DialogResult = true;
+        }
+
         public void FillModels(Tools.GridSystems gs)
         {
+            modelsNames.Items.Add(gs.Models.ToArray());
+        }
 
-            //modelsNames.Items.AddRange(gs.Models.ToArray());
+        private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Tools.SelectedSystem = modelsNames.SelectedIndex;
+        }
+
+        private void Close_Button(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
         }
     }
 }
