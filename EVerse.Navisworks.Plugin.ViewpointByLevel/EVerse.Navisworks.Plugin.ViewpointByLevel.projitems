@@ -9,12 +9,6 @@
     <Import_RootNamespace>EVerse.Navisworks.Plugin.ViewpointByLevel</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Tools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelPlugin.cs" />
   </ItemGroup>

@@ -5,7 +5,7 @@ using EVerse.Navisworks.Plugin.ViewpointByLevel;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Windows.Forms;
+using System.Windows;
 
 namespace EVerse.Navisworks.Plugin.Common
 {
