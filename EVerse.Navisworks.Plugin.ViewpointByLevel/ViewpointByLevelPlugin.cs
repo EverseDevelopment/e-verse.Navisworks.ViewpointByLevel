@@ -16,48 +16,42 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel
             Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
             var AView = oDoc.ActiveView;
 
-
-
             GridSystemCollection GSystems = oDoc.Grids.Systems;
             Tools.GridSystems gs = new Tools.GridSystems(GSystems);
 
-
             ViewpointByLevelWindow thisForm = new ViewpointByLevelWindow();
 
-                thisForm.FillModels(gs);
-                thisForm.ShowDialog();
-                //Exit plugin if user clicks cancel
-                //if (thisForm.DialogResult == DialogResult.Cancel)
-                //{ return 0; }
+            thisForm.FillModels(gs);
+            thisForm.ShowDialog();
+            //Exit plugin if user clicks cancel
+            if (thisForm.DialogResult == false)
+            { return 0; }
 
-                ////If user selects Apply create viewpoints
-                //if (thisForm.DialogResult == DialogResult.OK)
-                //{
-                //    using (Transaction t = new Transaction(oDoc, "Cutting Planes"))
-                //    {
+            //If user selects Apply create viewpoints
+            if (thisForm.DialogResult == true)
+            {
+                using (Transaction t = new Transaction(oDoc, "Cutting Planes"))
+                {
+                    //Offset for level
+                    double offset = Tools.CutOffset;
+                    //Model Origin
+                    var originZ = GSystems.FirstOrDefault().Origin.Z;
 
-                //        //Offset for level
-                //        double offset = Tools.CutOffset;
-                //        //Model Origin
-                //        var originZ = GSystems.FirstOrDefault().Origin.Z;
+                    foreach (var level in GSystems[Tools.SelectedSystem].Levels)
+                    {
+                        var elev = jview((-originZ - level.Elevation - offset).ToString());
 
-                //        foreach (var level in GSystems[Tools.SelectedSystem].Levels)
-                //        {
+                        AView.TrySetClippingPlanes(elev);
 
-                //            var elev = jview((-originZ - level.Elevation - offset).ToString());
+                        Console.Write(elev + Environment.NewLine);
+                        var newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
+                        newViewpoint.DisplayName = level.DisplayName;
+                        oDoc.SavedViewpoints.AddCopy(newViewpoint);
+                    }
 
-                //            AView.TrySetClippingPlanes(elev);
-
-                //            Console.Write(elev + Environment.NewLine);
-                //            var newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
-                //            newViewpoint.DisplayName = level.DisplayName;
-                //            oDoc.SavedViewpoints.AddCopy(newViewpoint);
-
-                //        }
-
-                //        t.Commit();
-                //    }
-                //}
+                    t.Commit();
+                }
+            }
             return 0;
         }
         private static string jview(string elevation)
