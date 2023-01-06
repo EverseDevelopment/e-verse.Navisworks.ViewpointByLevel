@@ -23,6 +23,7 @@
   <ItemGroup>
     <Content Include="clipPlaneTemplate.txt" />
     <Content Include="Images\VL_32.png" />
+    <Content Include="PackageContent.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="EVerse.Navisworks.Plugin.Common.projitems" />
