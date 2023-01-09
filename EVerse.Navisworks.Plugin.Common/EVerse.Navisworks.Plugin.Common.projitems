@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>0e931c02-2355-451e-97b5-7f43ff8d2145</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EVerse.Navisworks.Plugin.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)en-US\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)clipPlaneTemplate.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\VL_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)en-US\PluginRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Application\CommonCommandHandlerPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Application\IndentityInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PluginRibbon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\PluginBuilder.cs" />
+  </ItemGroup>
+</Project>
