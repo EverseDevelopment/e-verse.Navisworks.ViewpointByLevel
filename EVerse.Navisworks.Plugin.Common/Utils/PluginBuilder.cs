@@ -18,7 +18,7 @@ namespace EVerse.Navisworks.Plugin.Common.Utils
             //Autodesk.Navisworks.Api.Application.Plugins.AddPluginAssembly(fileName);
             //pluginRecord = Autodesk.Navisworks.Api.Application.Plugins.FindPlugin(pluginId);
 
-            pluginId = pluginName + "." + IdentityInformation.DeveloperID;
+            pluginId = string.Concat( pluginName, ".",IdentityInformation.DeveloperID);
             pluginRecord = Autodesk.Navisworks.Api.Application.Plugins.FindPlugin(pluginId);
         }
     }

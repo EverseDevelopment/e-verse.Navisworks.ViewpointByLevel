@@ -128,6 +128,7 @@ mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2022\Images"
 
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"
 copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\Images"
-copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\en-US"</PostBuildEvent>
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\en-US"
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.ViewpointByLevel\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"</PostBuildEvent>
   </PropertyGroup>
 </Project>

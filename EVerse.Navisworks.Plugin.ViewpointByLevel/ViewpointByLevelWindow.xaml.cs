@@ -1,6 +1,7 @@
 ﻿using Autodesk.Navisworks.Api;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -32,7 +33,10 @@ namespace EVerse.Navisworks.Plugin
 
         public void FillModels(Tools.GridSystems gs)
         {
-            modelsNames.Items.Add(gs.Models.ToArray());
+            foreach (string model in gs.Models)
+            {
+                modelsNames.Items.Add(model);
+            }
         }
 
         private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)

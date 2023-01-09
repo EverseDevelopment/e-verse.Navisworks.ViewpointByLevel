@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Navisworks.Api;
 using app = Autodesk.Navisworks.Api.Application;
+using System.IO;
 
 namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
 {
@@ -76,42 +77,6 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
             }
 
         }
-
-        public static void createViewpoints(Document doc)
-        {
-            var view = doc.ActiveView;
-
-            string text =
-            @"{ ""Type"": ""ClipPlaneSet"",
-	                ""Version"": 1,
-	                ""Planes"": [{
-		                ""Type"": ""ClipPlane"",
-		                ""Version"": 1,
-		                ""Normal"": [0, 0, -1],
-		                ""Distance"": {1},
-		                ""Enabled"": true
-	                    }, {
-		                    ""Type"": ""ClipPlane"",
-		                    ""Version"": 1,
-		                    ""Normal"": [0, 0, 1],
-		                    ""Distance"": {0},
-		                    ""Enabled"": true
-	                    }],
-	                    ""Linked"": false,
-	                    ""Enabled"": true
-                    }";
-
-            //ugly as shit
-            if (SelectedLevels.Count == 2)
-            {
-                var clip = text.Replace("{0}", SelectedLevels[0].ToString()).Replace("{1}", SelectedLevels[1].ToString());
-                view.SetClippingPlanes(clip);
-                var viewp = view.CreateViewpointCopy();
-                viewp.CreateCopy();
-            }
-
-        }
-
     }
 
 }

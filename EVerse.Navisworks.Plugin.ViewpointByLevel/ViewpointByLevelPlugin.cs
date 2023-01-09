@@ -3,6 +3,7 @@ using Autodesk.Navisworks.Api.Plugins;
 using EVerse.Navisworks.Plugin.Common.Application;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace EVerse.Navisworks.Plugin.ViewpointByLevel
@@ -47,9 +48,17 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel
             }
             return 0;
         }
+        private const string _jsonFileName = "clipPlaneTemplate.json";
         private static string jview(string elevation)
         {
-            var output = (@"{""Type"":""ClipPlaneSet"",""Version"":1,""Planes"":[{""Type"":""ClipPlane"",""Version"":1,""Normal"":[-0,-0,-1],""Distance"":{0},""Enabled"":true}],""Linked"":false,""Enabled"":true}").Replace("{0}", elevation);
+            string assemblyLocation = typeof(ViewpointByLevelPlugin).Assembly.Location;
+            string clipPlaneTextFilePath = Path.Combine(Path.GetDirectoryName(assemblyLocation), _jsonFileName);
+            string clipPlane = string.Empty;
+            using (StreamReader reader = new StreamReader(clipPlaneTextFilePath))
+            {
+                clipPlane = reader.ReadToEnd();
+            }
+            string output = (clipPlane).Replace("-3", elevation);
 
             return output;
         }

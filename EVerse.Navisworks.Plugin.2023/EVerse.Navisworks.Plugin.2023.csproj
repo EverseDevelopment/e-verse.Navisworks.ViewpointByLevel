@@ -132,10 +132,11 @@ mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2023\Images"
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
 copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\Images"
 copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\en-US"
+copy "$(SolutionDir)\EVerse.Navisworks.Plugin.ViewpointByLevel\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
 
 copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\PackageContents.xml" "$(SolutionDir)$(SolutionName).bundle"
 
-if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25ProgramData%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
+if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25AppData%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
 mkdir "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
 
 xcopy /e /s /h "$(SolutionDir)\$(SolutionName).bundle" "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"</PostBuildEvent>
