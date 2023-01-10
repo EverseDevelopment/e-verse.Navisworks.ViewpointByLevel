@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace EVerse.Navisworks.Plugin.Common
 {
-    [Plugin("VPByLevelRibbon", "EVS", DisplayName ="Viewpoint by Level")]
+    [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName ="Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
     [RibbonTab("VPByLevel")]
     [Command("ID_Button_1", LargeIcon ="VL_32.png", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
