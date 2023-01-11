@@ -12,12 +12,6 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common.Utils
 
         public PluginBuilder(string pluginName)
         {
-            //pluginId = pluginName + "." + IdentityInformation.DeveloperID;
-            //directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            //fileName = directoryName + $"\\plugins\\{Assembly.GetExecutingAssembly().GetName().Name}.{pluginName}.dll";
-            //Autodesk.Navisworks.Api.Application.Plugins.AddPluginAssembly(fileName);
-            //pluginRecord = Autodesk.Navisworks.Api.Application.Plugins.FindPlugin(pluginId);
-
             pluginId = string.Concat( pluginName, ".",IdentityInformation.DeveloperID);
             pluginRecord = Autodesk.Navisworks.Api.Application.Plugins.FindPlugin(pluginId);
         }
