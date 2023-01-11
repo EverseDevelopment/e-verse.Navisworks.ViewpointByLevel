@@ -1,12 +1,11 @@
 ﻿using Autodesk.Navisworks.Api;
 using Autodesk.Navisworks.Api.Plugins;
-using EVerse.Navisworks.Plugin.Common.Application;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
-using System;
+using EVerse.Navisworks.ViewpointByLevel.Common.Application;
 using System.IO;
 using System.Linq;
 
-namespace EVerse.Navisworks.Plugin.ViewpointByLevel
+namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
     [Plugin("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoints by Level", DisplayName = "Viewpoints by Level")]
     //[AddInPluginAttribute(AddInLocation.None)]

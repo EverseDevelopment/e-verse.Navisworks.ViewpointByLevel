@@ -1,7 +1,7 @@
 ﻿using Autodesk.Navisworks.Api.Plugins;
-using EVerse.Navisworks.Plugin.Common.Application;
+using EVerse.Navisworks.ViewpointByLevel.Common.Application;
 
-namespace EVerse.Navisworks.Plugin.Common.Utils
+namespace EVerse.Navisworks.ViewpointByLevel.Common.Utils
 {
     class PluginBuilder
     {

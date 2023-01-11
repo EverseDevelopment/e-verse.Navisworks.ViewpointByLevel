@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace EVerse.Navisworks.Plugin
+namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
     /// <summary>
     /// Interaction logic for ViewpointByLevelWindow.xaml

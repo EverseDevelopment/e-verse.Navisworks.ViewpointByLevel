@@ -6,7 +6,7 @@
     <SharedGUID>5ed8382c-9b17-416f-b414-af8327b6c6e2</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>EVerse.Navisworks.Plugin.ViewpointByLevel</Import_RootNamespace>
+    <Import_RootNamespace>EVerse.Navisworks.ViewpointByLevel.Plugin</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Tools.cs" />
