@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="AdWindows, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Navisworks.2022.1.0.3\lib\net48\AdWindows.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Api, Version=19.0.1366.6, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <HintPath>..\packages\Navisworks.2022.1.0.3\lib\net48\Autodesk.Navisworks.Api.dll</HintPath>
