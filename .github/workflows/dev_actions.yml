@@ -6,7 +6,6 @@ on:
   pull_request:
     # we'll also run this when pull requests to develop are opened
     branches: [develop]
-    types: [merged]
 
 jobs:
   Build:
