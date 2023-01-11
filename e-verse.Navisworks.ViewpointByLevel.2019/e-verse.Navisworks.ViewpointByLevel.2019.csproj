@@ -7,8 +7,8 @@
     <ProjectGuid>{944D393F-9BB3-4C5F-9566-BAAA4745A2CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EVerse.Navisworks.Plugin</RootNamespace>
-    <AssemblyName>EVerse.Navisworks.Plugin</AssemblyName>
+    <RootNamespace>EVerse.Navisworks.ViewpointByLevel</RootNamespace>
+    <AssemblyName>e-verse.Navisworks.ViewpointByLevel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -118,16 +118,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\EVerse.Navisworks.Plugin.Common\EVerse.Navisworks.Plugin.Common.projitems" Label="Shared" />
-  <Import Project="..\EVerse.Navisworks.Plugin.ViewpointByLevel\EVerse.Navisworks.Plugin.ViewpointByLevel.projitems" Label="Shared" />
+  <Import Project="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems" Label="Shared" />
+  <Import Project="..\e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2019\en-US"
 mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2019\Images"
 
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019"
-copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019\Images"
-copy "$(SolutionDir)\EVerse.Navisworks.Plugin.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019\en-US"
-copy "$(SolutionDir)\EVerse.Navisworks.Plugin.ViewpointByLevel\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019"</PostBuildEvent>
+copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019\Images"
+copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019\en-US"
+copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Plugin\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2019"</PostBuildEvent>
   </PropertyGroup>
 </Project>

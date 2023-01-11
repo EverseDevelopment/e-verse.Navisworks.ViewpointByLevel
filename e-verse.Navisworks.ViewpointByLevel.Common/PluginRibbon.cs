@@ -1,13 +1,13 @@
 ﻿using Autodesk.Navisworks.Api.Plugins;
-using EVerse.Navisworks.Plugin.Common.Application;
-using EVerse.Navisworks.Plugin.Common.Utils;
-using EVerse.Navisworks.Plugin.ViewpointByLevel;
+using EVerse.Navisworks.ViewpointByLevel.Common.Application;
+using EVerse.Navisworks.ViewpointByLevel.Common.Utils;
+using EVerse.Navisworks.ViewpointByLevel.Plugin;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows;
 
-namespace EVerse.Navisworks.Plugin.Common
+namespace EVerse.Navisworks.ViewpointByLevel.Common
 {
     [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName ="Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]

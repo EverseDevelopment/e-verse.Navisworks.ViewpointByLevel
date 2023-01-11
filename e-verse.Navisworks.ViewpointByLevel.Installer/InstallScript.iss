@@ -12,7 +12,7 @@ AppPublisher=E-Verse
 AppPublisherURL=-
 AppSupportURL=-
 AppUpdatesURL=-
-DefaultDirName={commonpf64}\E-Verse\NavisworksTools\
+DefaultDirName={commonpf64}\e-verse\NavisworksTools\
 DisableDirPage=yes
 DefaultGroupName=E-Verse
 DisableProgramGroupPage=yes
@@ -21,9 +21,9 @@ OutputDir="Installer"
 Compression=lzma
 SolidCompression=yes
 OutputManifestFile=Setup-Manifest.txt
-#define projectName "EVerse.Navisworks.Plugin"
-#define bundleName "EVerse.Navisworks.Plugin.bundle"
-#define bundlePath "{userappdata}\Autodesk\ApplicationPlugins\EVerse.Navisworks.Plugin.bundle\"
+#define projectName "e-verse.Navisworks.ViewpointByLevel"
+#define bundleName "e-verse.Navisworks.ViewpointByLevel.bundle"
+#define bundlePath "{userappdata}\Autodesk\ApplicationPlugins\e-verse.Navisworks.ViewpointByLevel.bundle\"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl";
@@ -32,10 +32,10 @@ Name: "english"; MessagesFile: "compiler:Default.isl";
 SetupWindowTitle =  Setup {#SetupSetting("AppName")} Version: {#SetupSetting("AppVersion")}
 
 [Dirs]
-Name: "{commonpf64}\E-Verse\NavisworksTools\"
+Name: "{commonpf64}\e-verse\NavisworksTools\"
 
 [InstallDelete]
-Type: filesandordirs; Name: "{commonpf64}\E-Verse\NavisworksTools\"
+Type: filesandordirs; Name: "{commonpf64}\e-verse\NavisworksTools\"
 
 [Files]
 Source: "..\{#bundleName}\*"; DestDir: "{#bundlePath}"; Flags: ignoreversion recursesubdirs createallsubdirs
