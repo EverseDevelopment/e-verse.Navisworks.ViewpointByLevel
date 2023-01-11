@@ -43,6 +43,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-verse.Navisworks.Viewpoin
 		{37B80542-76C6-4592-A84E-B5F45D7150F2} = {37B80542-76C6-4592-A84E-B5F45D7150F2}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{007614DB-B657-4C60-A6ED-7CFBF3F5B5AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{2185DD34-389B-4866-B770-DD3BCF5B38A7}"
+	ProjectSection(SolutionItems) = preProject
+		dev_actions.yml = dev_actions.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +87,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2185DD34-389B-4866-B770-DD3BCF5B38A7} = {007614DB-B657-4C60-A6ED-7CFBF3F5B5AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64CF1C1F-3176-4161-86E8-76C638C37602}
