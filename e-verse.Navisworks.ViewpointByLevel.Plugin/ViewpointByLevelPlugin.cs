@@ -8,7 +8,6 @@ using System.Linq;
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
     [Plugin("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoints by Level", DisplayName = "Viewpoints by Level")]
-    //[AddInPluginAttribute(AddInLocation.None)]
     public class ViewpointByLevelPlugin : CustomPlugin
     {
         public int Execute(params string[] parameters)
