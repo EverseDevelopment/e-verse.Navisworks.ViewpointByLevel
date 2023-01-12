@@ -40,7 +40,19 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
             public List<string> Models { get; set; }
 
         }
+        public class ModelUnits
+        {
+            public List<Units> units;
 
+            public ModelUnits(Document document)
+            {
+                units = new List<Units>();
+                foreach (var item in document.Models)
+                {
+                    units.Add(item.Units);
+                }
+            }
+        }
         public class Grids
         {
             public string name;

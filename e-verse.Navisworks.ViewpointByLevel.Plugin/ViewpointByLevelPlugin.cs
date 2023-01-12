@@ -18,6 +18,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 
             GridSystemCollection gSystems = oDoc.Grids.Systems;
             Tools.GridSystems gs = new Tools.GridSystems(gSystems);
+            Tools.ModelUnits mu = new Tools.ModelUnits(oDoc);
 
             ViewpointByLevelWindow viewpointByLevelWindow = new ViewpointByLevelWindow();
 
