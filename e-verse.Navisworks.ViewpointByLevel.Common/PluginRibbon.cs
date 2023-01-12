@@ -12,7 +12,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common
     [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName ="Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
     [RibbonTab("VPByLevel")]
-    [Command("VPByLevel", LargeIcon ="VL_32.png", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
+    [Command("VPByLevel", LargeIcon ="VL_32.jpg", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
     class PluginRibbon : CommonCommandHandlerPlugin
     {
         public override int ExecuteCommand(string name, params string[] parameters)

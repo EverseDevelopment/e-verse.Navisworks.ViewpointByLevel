@@ -127,7 +127,7 @@
 mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2022\Images"
 
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"
-copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.png" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\Images"
+copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.jpg" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\Images"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\en-US"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Plugin\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"</PostBuildEvent>
   </PropertyGroup>
