@@ -1,1 +1,15 @@
-﻿{"Type":"ClipPlaneSet","Version":1,"Planes":[{"Type":"ClipPlane","Version":1,"Normal":[-0,-0,-1],"Distance":-3 ,"Enabled":true}],"Linked":false,"Enabled":true}
+﻿{
+  "Type": "ClipPlaneSet",
+  "Version": 1,
+  "Planes": [
+    {
+      "Type": "ClipPlane",
+      "Version": 1,
+      "Normal": [ -0, -0, -1 ],
+      "Distance": [ 0 ],
+      "Enabled": true
+    }
+  ],
+  "Linked": false,
+  "Enabled": true
+}

@@ -2,6 +2,7 @@
 using Autodesk.Navisworks.Api.Plugins;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using EVerse.Navisworks.ViewpointByLevel.Common.Application;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -56,8 +57,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             {
                 clipPlane = reader.ReadToEnd();
             }
-            string output = (clipPlane).Replace("-3", elevation);
-
+            string output = (clipPlane).Replace("[ 0 ]", elevation);
+            
             return output;
         }
     }
