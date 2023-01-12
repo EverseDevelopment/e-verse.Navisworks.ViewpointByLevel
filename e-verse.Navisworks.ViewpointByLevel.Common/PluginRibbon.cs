@@ -12,7 +12,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common
     [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName ="Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
     [RibbonTab("VPByLevel")]
-    [Command("ID_Button_1", LargeIcon ="VL_32.png", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
+    [Command("VPByLevel", LargeIcon ="VL_32.png", ToolTip="Viewpoint by level", DisplayName ="Viewpoint by Level")]
     class PluginRibbon : CommonCommandHandlerPlugin
     {
         public override int ExecuteCommand(string name, params string[] parameters)
@@ -22,7 +22,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common
             Autodesk.Navisworks.Api.Application.Plugins.AddPluginAssembly(pluginFileName);
             switch (name)
             {
-                case "ID_Button_1":
+                case "VPByLevel":
                     try
                     {
                         if (!Autodesk.Navisworks.Api.Application.IsAutomated)
