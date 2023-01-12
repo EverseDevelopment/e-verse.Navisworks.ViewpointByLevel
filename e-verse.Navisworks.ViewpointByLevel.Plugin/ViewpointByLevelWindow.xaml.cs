@@ -1,7 +1,6 @@
 ﻿using Autodesk.Navisworks.Api;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using System;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -13,6 +12,9 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
     /// </summary>
     public partial class ViewpointByLevelWindow : Window
     {
+        private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
+        private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
+
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
@@ -31,8 +33,6 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             }
             this.DialogResult = true;
         }
-        private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
-        private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
         public void FillModels(Tools.GridSystems gs)
         {
             if (gs.Models.Count > 0)
@@ -44,7 +44,6 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
                 OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.Gray);
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
-
         }
         private void OffOn(bool toggle, string message, System.Windows.Media.Color color)
         {
