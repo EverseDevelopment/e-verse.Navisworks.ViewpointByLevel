@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
@@ -30,15 +31,30 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             }
             this.DialogResult = true;
         }
-
+        private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
+        private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
         public void FillModels(Tools.GridSystems gs)
         {
-            foreach (string model in gs.Models)
+            if (gs.Models.Count > 0)
             {
-                modelsNames.Items.Add(model);
+                foreach (string model in gs.Models)
+                {
+                    modelsNames.Items.Add(model);
+                }
+                OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.Gray);
             }
-        }
+            else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
 
+        }
+        private void OffOn(bool toggle, string message, System.Windows.Media.Color color)
+        {
+            modelsNames.IsEnabled = toggle;
+            modelsNames.IsHitTestVisible = toggle;
+            applyButton.IsEnabled = toggle;
+            textBox.IsEnabled = toggle;
+            notificationField.Content = message;
+            notificationField.Foreground = new SolidColorBrush(color);
+        }
         private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Tools.SelectedSystem = modelsNames.SelectedIndex;
