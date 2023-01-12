@@ -15,11 +15,11 @@
         <RibbonPanel x:Uid="RibbonPane1_1">
             <RibbonPanelSource x:Uid="RibbonPanelSource_RibbonPanel_1" KeyTip="C1" Title="Tools">
 
-                <local:NWRibbonButton x:Uid="Button_1" Id="ID_Button_1"
+                <local:NWRibbonButton x:Uid="VPByLevel" Id="VPByLevel"
                             Size="Large"
                             KeyTip="B1"
                             ShowText="True"
-                            Text="Button_1"
+                            Text="VP by Level"
                             Orientation="Vertical"/>
             </RibbonPanelSource>
         </RibbonPanel>
