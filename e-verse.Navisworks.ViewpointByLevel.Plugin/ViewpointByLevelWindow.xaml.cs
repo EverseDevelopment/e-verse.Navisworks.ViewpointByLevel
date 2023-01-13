@@ -4,6 +4,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using static EVerse.Navisworks.Plugin.ViewpointByLevel.Utils.Tools;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
@@ -14,6 +15,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
     {
         private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
+        private int SelectedUnits { get; set; }
 
         public ViewpointByLevelWindow()
         {
@@ -25,6 +27,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             try
             {
                 Tools.CutOffset = Convert.ToDouble(textBox.Text);
+                Tools.SelectedUnits = (UnitsEnum)SelectedUnits;
             }
             catch
             {
@@ -45,6 +48,13 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
         }
+        public void FillUnits()
+        {
+            modelUnits.Items.Add(Units.Meters.ToString());
+            modelUnits.Items.Add(Units.Feet.ToString());
+            modelUnits.Items.Add(Units.Inches.ToString());
+
+        }
         private void OffOn(bool toggle, string message, System.Windows.Media.Color color)
         {
             modelsNames.IsEnabled = toggle;
@@ -58,7 +68,10 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
         {
             Tools.SelectedSystem = modelsNames.SelectedIndex;
         }
-
+        private void Units_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SelectedUnits = modelUnits.SelectedIndex;
+        }
         private void Close_Button(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;

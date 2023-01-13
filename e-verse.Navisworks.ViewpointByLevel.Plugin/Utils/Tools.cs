@@ -23,6 +23,15 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
         /// </summary>
         public static int SelectedSystem { get; set; }
 
+        public static UnitsEnum SelectedUnits;
+
+        public enum UnitsEnum
+        {
+            Meters=0,
+            Feet=1,
+            Inches=2,
+        }
+
         /// <summary>
         /// Class that stores a list of models, index will match the loop 
         /// </summary>
@@ -40,7 +49,27 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
             public List<string> Models { get; set; }
 
         }
+        public class ModelUnits
+        {
+            public Dictionary<string, Units> units;
 
+            public ModelUnits(Document document)
+            {
+                units = new Dictionary<string, Units>();
+                foreach (var item in document.Models)
+                {
+                    units.Add(item.FileName, item.Units);
+                }
+            }
+        }
+
+        public class UnitsConverter
+        {
+            public UnitsConverter()
+            {
+
+            }
+        }
         public class Grids
         {
             public string name;
