@@ -2,6 +2,7 @@
 using Autodesk.Navisworks.Api.Plugins;
 using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
 using EVerse.Navisworks.ViewpointByLevel.Common.Application;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -17,10 +18,12 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 
             GridSystemCollection gSystems = oDoc.Grids.Systems;
             Tools.GridSystems gs = new Tools.GridSystems(gSystems);
+            Tools.ModelUnits mu = new Tools.ModelUnits(oDoc);
 
             ViewpointByLevelWindow viewpointByLevelWindow = new ViewpointByLevelWindow();
 
             viewpointByLevelWindow.FillModels(gs);
+            viewpointByLevelWindow.FillUnits();
             viewpointByLevelWindow.ShowDialog();
             //Exit plugin if user clicks cancel
             if (viewpointByLevelWindow.DialogResult == false)
@@ -31,8 +34,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             {
                 using (Transaction t = new Transaction(oDoc, "Cutting Planes"))
                 {
-                    //Offset for level
-                    double offset = Tools.CutOffset;
+                    double offset = ComputeOffsetValue(mu);
+
                     //Model Origin
                     double originZ = gSystems.FirstOrDefault().Origin.Z;
 
@@ -46,6 +49,21 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             }
             return 0;
         }
+
+        private static double ComputeOffsetValue(Tools.ModelUnits mu)
+        {
+            //Offset for level
+            double offset = Tools.CutOffset;
+            // get the selected units
+            Enum.TryParse(Tools.SelectedUnits.ToString(), out Units selectedUnits);
+            // get the model units
+            Units modelUnits = mu.units.Values.First();
+            // calculate the scale factor between two scales
+            double scaleFactor = UnitConversion.ScaleFactor(modelUnits, selectedUnits);
+            // calculate the new offset value
+            return offset *= scaleFactor;
+        }
+
         private const string _jsonFileName = "clipPlaneTemplate.json";
         private static string jview(string elevation)
         {
@@ -56,7 +74,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             {
                 clipPlane = reader.ReadToEnd();
             }
-            string output = (clipPlane).Replace("-3", elevation);
+            string output = (clipPlane).Replace("[ 0 ]", elevation);
 
             return output;
         }
