@@ -16,6 +16,6 @@
 		<Label Content="Model Units" HorizontalAlignment="Left" Margin="349,7,0,0" VerticalAlignment="Top" Width="164"/>
 		<Button Content="Close" HorizontalAlignment="Left" Margin="40,138,0,0" VerticalAlignment="Top" Width="104" Click="Close_Button"/>
 		<ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="22" Margin="410,33,0,0" VerticalAlignment="Top" Width="104" SelectionChanged="Units_SelectionChanged" />
-		<Label Content="Offset upper clip plane (feet)" HorizontalAlignment="Left" Margin="349,65,0,0" VerticalAlignment="Top" Width="164"/>
+		<Label Content="Offset upper clip plane" HorizontalAlignment="Left" Margin="349,65,0,0" VerticalAlignment="Top" Width="164"/>
     </Grid>
 </Window>
