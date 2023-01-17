@@ -8,13 +8,13 @@
 AppId={{77742920-E696-4FAE-80B7-D43148C6E668}
 AppName=ViewpointByLevel  
 AppVersion=1.0.0
-AppPublisher=E-Verse
+AppPublisher=e-verse
 AppPublisherURL=-
 AppSupportURL=-
 AppUpdatesURL=-
 DefaultDirName={commonpf64}\e-verse\NavisworksTools\
 DisableDirPage=yes
-DefaultGroupName=E-Verse
+DefaultGroupName=e-verse
 DisableProgramGroupPage=yes
 OutputBaseFilename=e-verse.Navisworks.ViewpointByLevel
 OutputDir="Installer"
