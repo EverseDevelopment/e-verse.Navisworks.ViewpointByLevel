@@ -8,13 +8,21 @@
              AllowsTransparency="True"
              Background="{x:Null}"
              mc:Ignorable="d"
-             Width="580"
-             Height="350"
+             Width="380"
+             Height="450"
              Title="Viewpoint by level"
              ResizeMode="NoResize"
              Topmost="True"
              ShowInTaskbar="True"
              Style="{DynamicResource CustomWindowStyle}">
+    <Window.InputBindings>
+        <KeyBinding Key="Escape"
+                    Command="Close" />
+        <KeyBinding Gesture="Enter"
+                    Command="Open" />
+        <KeyBinding Gesture="F1"
+                    Command="Help" />
+    </Window.InputBindings>
     <Border
         x:Name="MainWindow_Border"
         Background="White"
@@ -31,15 +39,77 @@
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
         <Grid>
-            <Label Style="{DynamicResource TitleLabels}" Content="Model" HorizontalAlignment="Left" Margin="42,85,0,0" VerticalAlignment="Top" Width="122"/>
-            <ComboBox x:Name="modelsNames" HorizontalAlignment="Left" Height="22" Margin="42,116,0,0" VerticalAlignment="Top" Width="291" SelectionChanged="Model_SelectionChanged" BorderBrush="#FFACACAC"/>
-            <Label Style="{DynamicResource TitleLabels}" x:Name="notificationField" Content="" HorizontalAlignment="Left" Margin="42,114,0,0" VerticalAlignment="Top" Width="291"/>
-            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="412,240,0,0" VerticalAlignment="Top" Width="104" Click="Apply_Button"/>
-            <TextBox Style="{DynamicResource MainTextBox}" x:Name="textBox" Height="22" Margin="410,190,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="106"/>
-            <Label Style="{DynamicResource TitleLabels}" Content="Model Units" HorizontalAlignment="Left" Margin="351,85,0,0" VerticalAlignment="Top" Width="164"/>
-            <Button Style="{DynamicResource MainButtonStyle}" Content="Close" HorizontalAlignment="Left" Margin="42,240,0,0" VerticalAlignment="Top" Width="104" Click="Close_Button"/>
-            <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="22" Margin="412,116,0,0" VerticalAlignment="Top" Width="104" SelectionChanged="Units_SelectionChanged" />
-            <Label Style="{DynamicResource TitleLabels}" Content="Offset upper clip plane" HorizontalAlignment="Left" Margin="351,160,0,0" VerticalAlignment="Top" Width="164"/>
+            <Label Style="{DynamicResource TitleLabels}" Content="Plane" HorizontalAlignment="Left" Margin="15,227,0,0" VerticalAlignment="Top" Width="164"/>
+            <Label Style="{DynamicResource TitleLabels}" Content="Model" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" Width="122"/>
+            <ComboBox x:Name="modelsNames" HorizontalAlignment="Left" Height="22" Margin="15,131,0,0" VerticalAlignment="Top" Width="318" SelectionChanged="Model_SelectionChanged" BorderBrush="#FFACACAC"/>
+            <Label Style="{DynamicResource TitleLabels}" x:Name="notificationField" Content="Select a revit model" HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top" Width="292" FontSize="12" FontWeight="Regular"/>
+            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="22,309,0,0" VerticalAlignment="Top" Width="311" Click="Apply_Button"/>
+            <TextBox Style="{DynamicResource MainTextBox}" x:Name="textBox" Height="22" Margin="87,268,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108"/>
+            <Label Style="{DynamicResource TitleLabels}" Content="Units" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" Width="164"/>
+            <Button Style="{DynamicResource MainButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Width="28" Click="Close_Button" Height="28" RenderTransformOrigin="0.929,0.929"/>
+            <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="22" Margin="87,198,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="Units_SelectionChanged" />
+            <Rectangle  VerticalAlignment="Top" 
+                Fill="Gray" 
+                Height="1" 
+                Opacity="0.2" 
+                RenderTransformOrigin="0.5,0.5" Margin="66,106,25,0">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle  VerticalAlignment="Top" 
+                Fill="Gray" 
+                Height="1" 
+                Opacity="0.2" 
+                RenderTransformOrigin="0.5,0.5" Margin="66,172,25,0">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label      
+                Style="{DynamicResource SecondaryLabel}"
+                HorizontalAlignment="Left" 
+                Margin="15,197,0,0" 
+                Content="Model units:"
+                VerticalAlignment="Top" 
+                Width="72"/>
+            <Rectangle  VerticalAlignment="Top" 
+                Fill="Gray" 
+                Height="1" 
+                Opacity="0.2" 
+                RenderTransformOrigin="0.5,0.5" Margin="66,243,25,0">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label      
+                Style="{DynamicResource SecondaryLabel}"
+                HorizontalAlignment="Left" 
+                Margin="15,267,0,0" 
+                Content="Offset:"
+                VerticalAlignment="Top" 
+                Width="72"/>
+            <Label      
+                Style="{DynamicResource SecondaryLabel}"
+                HorizontalAlignment="Left" 
+                Margin="188,364,0,0" 
+                Content="Made with 💓 by e-verse" 
+                Width="145" FontWeight="Bold" Height="24" VerticalAlignment="Top"/>
         </Grid>
     </Border>
     <Window.Resources>
