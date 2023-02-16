@@ -1,12 +1,13 @@
 ﻿using Autodesk.Navisworks.Api;
-using EVerse.Navisworks.Plugin.ViewpointByLevel.Utils;
+using EVerse.Navisworks.ViewpointByLevel.Plugin.Utils;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
-using static EVerse.Navisworks.Plugin.ViewpointByLevel.Utils.Tools;
+using static EVerse.Navisworks.ViewpointByLevel.Plugin.Utils.Tools;
 
-namespace EVerse.Navisworks.ViewpointByLevel.Plugin
+namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
 {
     /// <summary>
     /// Interaction logic for ViewpointByLevelWindow.xaml
@@ -67,6 +68,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
         private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Tools.SelectedSystem = modelsNames.SelectedIndex;
+            OffOn(true, "", Colors.Gray);
         }
         private void Units_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -84,6 +86,10 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             SavedViewpoint newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
             newViewpoint.DisplayName = displayName;
             oDoc.SavedViewpoints.AddCopy(newViewpoint);
+        }
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
