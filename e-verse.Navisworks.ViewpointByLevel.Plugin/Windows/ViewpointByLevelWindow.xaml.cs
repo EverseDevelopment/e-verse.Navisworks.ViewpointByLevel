@@ -60,6 +60,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         {
             modelsNames.IsEnabled = toggle;
             modelsNames.IsHitTestVisible = toggle;
+            modelUnits.IsEnabled= toggle;
             applyButton.IsEnabled = toggle;
             textBox.IsEnabled = toggle;
             notificationField.Content = message;

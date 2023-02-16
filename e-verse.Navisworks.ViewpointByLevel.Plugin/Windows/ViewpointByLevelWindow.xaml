@@ -39,14 +39,26 @@
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
         <Grid>
+            <Grid>
+                <Label Style="{DynamicResource TitleLabels}" Content="Viewpoint By Level" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" Width="164" FontSize="18" FontWeight="Regular"/>
+                <Image Name="SlideUp_Image" 
+                Visibility="Visible" 
+                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_32.jpg"
+                HorizontalAlignment="Left"
+                Width="63" 
+                SnapsToDevicePixels="True" 
+                RenderOptions.BitmapScalingMode="HighQuality" 
+                RenderOptions.EdgeMode="Aliased" 
+                Margin="10,7,0,357"/>
+                <Button Style="{DynamicResource CloseButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Width="28" Click="Close_Button" Height="28" RenderTransformOrigin="0.929,0.929"/>
+            </Grid>
             <Label Style="{DynamicResource TitleLabels}" Content="Plane" HorizontalAlignment="Left" Margin="15,227,0,0" VerticalAlignment="Top" Width="164"/>
             <Label Style="{DynamicResource TitleLabels}" Content="Model" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" Width="122"/>
             <ComboBox x:Name="modelsNames" HorizontalAlignment="Left" Height="22" Margin="15,131,0,0" VerticalAlignment="Top" Width="318" SelectionChanged="Model_SelectionChanged" BorderBrush="#FFACACAC"/>
             <Label Style="{DynamicResource TitleLabels}" x:Name="notificationField" Content="Select a revit model" HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top" Width="292" FontSize="12" FontWeight="Regular"/>
-            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="22,309,0,0" VerticalAlignment="Top" Width="311" Click="Apply_Button"/>
             <TextBox Style="{DynamicResource MainTextBox}" x:Name="textBox" Height="22" Margin="87,268,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108"/>
             <Label Style="{DynamicResource TitleLabels}" Content="Units" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" Width="164"/>
-            <Button Style="{DynamicResource MainButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Width="28" Click="Close_Button" Height="28" RenderTransformOrigin="0.929,0.929"/>
+            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="22,309,0,0" VerticalAlignment="Top" Width="311" Click="Apply_Button"/>
             <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="22" Margin="87,198,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="Units_SelectionChanged" />
             <Rectangle  VerticalAlignment="Top" 
                 Fill="Gray" 
