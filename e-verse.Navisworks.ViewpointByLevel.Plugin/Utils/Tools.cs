@@ -8,7 +8,7 @@ using Autodesk.Navisworks.Api;
 using app = Autodesk.Navisworks.Api.Application;
 using System.IO;
 
-namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
+namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Utils
 {
 
     public static class Tools
@@ -27,13 +27,13 @@ namespace EVerse.Navisworks.Plugin.ViewpointByLevel.Utils
 
         public enum UnitsEnum
         {
-            Meters=0,
-            Feet=1,
-            Inches=2,
+            Meters = 0,
+            Feet = 1,
+            Inches = 2,
         }
 
         /// <summary>
-        /// Class that stores a list of models, index will match the loop 
+        /// Class that stores a list of models, index will match the loop
         /// </summary>
         public class GridSystems
         {

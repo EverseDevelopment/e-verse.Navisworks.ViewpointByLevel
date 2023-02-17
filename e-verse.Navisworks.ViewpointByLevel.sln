@@ -36,12 +36,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-verse.Navisworks.Viewpoin
 		{EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD} = {EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD}
 	EndProjectSection
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "e-verse.Navisworks.ViewpointByLevel.Plugin", "e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.shproj", "{5ED8382C-9B17-416F-B414-AF8327B6C6E2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-verse.Navisworks.ViewpointByLevel.Installer", "e-verse.Navisworks.ViewpointByLevel.Installer\e-verse.Navisworks.ViewpointByLevel.Installer.csproj", "{B975B732-82F7-40D5-8260-524D5306158D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{37B80542-76C6-4592-A84E-B5F45D7150F2} = {37B80542-76C6-4592-A84E-B5F45D7150F2}
 	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "e-verse.Navisworks.ViewpointByLevel.Plugin", "e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.shproj", "{A935471B-241F-4256-A392-94148591E4F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +95,7 @@ Global
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{4b97b73b-9157-4483-9269-b36fc42eaff7}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems*{944d393f-9bb3-4c5f-9566-baaa4745a2ca}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{944d393f-9bb3-4c5f-9566-baaa4745a2ca}*SharedItemsImports = 4
+		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{a935471b-241f-4256-a392-94148591e4f3}*SharedItemsImports = 13
 		e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems*{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}*SharedItemsImports = 4
 	EndGlobalSection
