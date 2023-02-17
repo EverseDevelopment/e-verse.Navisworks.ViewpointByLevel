@@ -3,7 +3,7 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>5ed8382c-9b17-416f-b414-af8327b6c6e2</SharedGUID>
+    <SharedGUID>c82b579e-f43e-4002-8c1d-cbbe5df2a739</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>EVerse.Navisworks.ViewpointByLevel.Plugin</Import_RootNamespace>
@@ -11,12 +11,15 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Tools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelPlugin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelWindow.xaml.cs">
-      <DependentUpon>ViewpointByLevelWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Windows\Resources.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Windows\ViewpointByLevelWindow.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)ViewpointByLevelWindow.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Windows\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Windows\ViewpointByLevelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
