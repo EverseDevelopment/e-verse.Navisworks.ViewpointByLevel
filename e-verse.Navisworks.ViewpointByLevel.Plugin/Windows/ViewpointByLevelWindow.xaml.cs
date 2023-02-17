@@ -1,10 +1,12 @@
 ﻿using Autodesk.Navisworks.Api;
+using EVerse.Navisworks.ViewpointByLevel.Common;
 using EVerse.Navisworks.ViewpointByLevel.Plugin.Utils;
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using static EVerse.Navisworks.ViewpointByLevel.Plugin.Utils.Tools;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
@@ -16,12 +18,23 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
     {
         private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
+        private const string IMAGE_PATH = "Images\\VL_32.jpg";
         private int SelectedUnits { get; set; }
 
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
+            LoadAddinImage();
         }
+
+        private void LoadAddinImage()
+        {
+            string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
+            string fullPath = System.IO.Path.Combine(commonProjectDirectory, IMAGE_PATH);
+            Uri uri = new Uri(fullPath);
+            SlideUp_Image.Source = new BitmapImage(uri);
+        }
+
 
         private void Apply_Button(object sender, RoutedEventArgs e)
         {

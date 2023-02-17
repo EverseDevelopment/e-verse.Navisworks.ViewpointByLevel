@@ -41,9 +41,8 @@
         <Grid>
             <Grid>
                 <Label Style="{DynamicResource TitleLabels}" Content="Viewpoint By Level" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" Width="164" FontSize="18" FontWeight="Regular"/>
-                <Image Name="SlideUp_Image" 
+                <Image x:Name="SlideUp_Image" 
                 Visibility="Visible" 
-                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_32.jpg"
                 HorizontalAlignment="Left"
                 Width="63" 
                 SnapsToDevicePixels="True" 
