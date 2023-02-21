@@ -8,7 +8,7 @@
              AllowsTransparency="True"
              Background="{x:Null}"
              mc:Ignorable="d"
-             Width="380"
+             Width="369"
              Height="450"
              Title="Viewpoint by level"
              ResizeMode="NoResize"
@@ -25,7 +25,7 @@
     </Window.InputBindings>
     <Border
         x:Name="MainWindow_Border"
-        Background="White"
+        Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1,1,1,1"
             CornerRadius="8,8,8,8"
@@ -39,25 +39,42 @@
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
         <Grid>
-            <Grid>
-                <Label Style="{DynamicResource TitleLabels}" Content="Viewpoint By Level" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" Width="164" FontSize="18" FontWeight="Regular"/>
-                <Image x:Name="SlideUp_Image" 
+            <Grid Margin="0,0,10,0">
+                <Label Style="{DynamicResource TitleLabels}" Content="Clara" HorizontalAlignment="Left" Margin="37,8,0,0" VerticalAlignment="Top" Width="235" FontSize="45" FontWeight="Bold" Height="44"/>
+
+                <!--<Image x:Name="SlideUp_Image" 
                 Visibility="Visible" 
                 HorizontalAlignment="Left"
                 Width="63" 
                 SnapsToDevicePixels="True" 
                 RenderOptions.BitmapScalingMode="HighQuality" 
                 RenderOptions.EdgeMode="Aliased" 
-                Margin="10,7,0,357"/>
+                Margin="10,7,0,357"/>-->
                 <Button Style="{DynamicResource CloseButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Width="28" Click="Close_Button" Height="28" RenderTransformOrigin="0.929,0.929"/>
             </Grid>
+            <Line Stroke="{DynamicResource MainGray}"
+                  X2="1000"
+                  Opacity="0.5"
+                  StrokeThickness="4"
+                  VerticalAlignment="Top"
+                  Margin="-9,59,-9,0" RenderTransformOrigin="0.5,0.5" Height="2">
+                <Line.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Line.RenderTransform>
+            </Line>
+
             <Label Style="{DynamicResource TitleLabels}" Content="Plane" HorizontalAlignment="Left" Margin="15,227,0,0" VerticalAlignment="Top" Width="164"/>
             <Label Style="{DynamicResource TitleLabels}" Content="Model" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" Width="122"/>
             <ComboBox x:Name="modelsNames" HorizontalAlignment="Left" Height="22" Margin="15,131,0,0" VerticalAlignment="Top" Width="318" SelectionChanged="Model_SelectionChanged" BorderBrush="#FFACACAC"/>
             <Label Style="{DynamicResource TitleLabels}" x:Name="notificationField" Content="Select a revit model" HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top" Width="292" FontSize="12" FontWeight="Regular"/>
-            <TextBox Style="{DynamicResource MainTextBox}" x:Name="textBox" Height="22" Margin="87,268,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108"/>
+            <TextBox Style="{DynamicResource MainTextBox}" IsEnabled="False" x:Name="textBox" Height="22" Margin="87,268,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108"/>
             <Label Style="{DynamicResource TitleLabels}" Content="Units" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" Width="164"/>
-            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="22,309,0,0" VerticalAlignment="Top" Width="311" Click="Apply_Button"/>
+            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" IsEnabled="False" Content="Apply" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" Width="318" Click="Apply_Button"/>
             <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="22" Margin="87,198,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="Units_SelectionChanged" />
             <Rectangle  VerticalAlignment="Top" 
                 Fill="Gray" 
@@ -115,12 +132,63 @@
                 Content="Offset:"
                 VerticalAlignment="Top" 
                 Width="72"/>
-            <Label      
-                Style="{DynamicResource SecondaryLabel}"
-                HorizontalAlignment="Left" 
-                Margin="188,364,0,0" 
-                Content="Made with 💓 by e-verse" 
-                Width="145" FontWeight="Bold" Height="24" VerticalAlignment="Top"/>
+            <Button
+                    Style="{DynamicResource CloseButtonStyle}"
+                    Margin="185,365,10,0"
+                    Background="Transparent"
+                    Click="Title_Link"
+                    FontWeight="Light"
+                    FontSize="12"     
+                    Foreground="{DynamicResource MainGray}" Height="22" Loaded="FinDisclaimerButtonChildImage" VerticalAlignment="Top" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="243*"/>
+                                    <ColumnDefinition Width="47*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock
+                                    Text="Made with       by e-verse" 
+                                    Margin="4,1,1,-1"
+                                    FontWeight="Bold" Grid.ColumnSpan="2">
+                                </TextBlock>
+                                <Image Name="heartImage"
+                                       Visibility="Visible" 
+                                       HorizontalAlignment="Left"
+                                       Width="20"
+                                       SnapsToDevicePixels="True" 
+                                       RenderOptions.BitmapScalingMode="HighQuality" 
+                                       RenderOptions.EdgeMode="Aliased" 
+                                       Margin="66,-1,0,4" RenderTransformOrigin="0.5,0.5">
+                                    <Image.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleY="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Image.RenderTransform>
+                                </Image>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers >
+                            <Trigger Property="IsDefaulted" Value="True">
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
+
+
         </Grid>
     </Border>
     <Window.Resources>
