@@ -24,16 +24,16 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
-            LoadAddinImage();
+            //LoadAddinImage();
         }
 
-        private void LoadAddinImage()
-        {
-            string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
-            string fullPath = System.IO.Path.Combine(commonProjectDirectory, IMAGE_PATH);
-            Uri uri = new Uri(fullPath);
-            SlideUp_Image.Source = new BitmapImage(uri);
-        }
+        //private void LoadAddinImage()
+        //{
+        //    string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
+        //    string fullPath = System.IO.Path.Combine(commonProjectDirectory, IMAGE_PATH);
+        //    Uri uri = new Uri(fullPath);
+        //    SlideUp_Image.Source = new BitmapImage(uri);
+        //}
 
 
         private void Apply_Button(object sender, RoutedEventArgs e)
@@ -73,8 +73,9 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         {
             modelsNames.IsEnabled = toggle;
             modelsNames.IsHitTestVisible = toggle;
-            modelUnits.IsEnabled= toggle;
+            modelUnits.IsEnabled = toggle;
             applyButton.IsEnabled = toggle;
+            applyButton.Foreground = new SolidColorBrush(Colors.White);
             textBox.IsEnabled = toggle;
             notificationField.Content = message;
             notificationField.Foreground = new SolidColorBrush(color);
