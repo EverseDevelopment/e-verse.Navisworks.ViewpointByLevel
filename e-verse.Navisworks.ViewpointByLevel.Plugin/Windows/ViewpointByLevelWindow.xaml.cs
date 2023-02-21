@@ -18,24 +18,23 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
     {
         private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
-        private const string IMAGE_PATH = "Images\\VL_32.jpg";
+        //private const string ADDIN_IMAGE_PATH = "Images\\VL_32.jpg";
+        private const string HEART_IMAGE_PATH = "Images\\Heart.jpg";
+
         private int SelectedUnits { get; set; }
 
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
-            //LoadAddinImage();
         }
 
-        //private void LoadAddinImage()
-        //{
-        //    string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
-        //    string fullPath = System.IO.Path.Combine(commonProjectDirectory, IMAGE_PATH);
-        //    Uri uri = new Uri(fullPath);
-        //    SlideUp_Image.Source = new BitmapImage(uri);
-        //}
-
-
+        private void LoadImage(Image image, string imagePath)
+        {
+            string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
+            string fullPath = System.IO.Path.Combine(commonProjectDirectory, imagePath);
+            Uri uri = new Uri(fullPath);
+            image.Source = new BitmapImage(uri);
+        }
         private void Apply_Button(object sender, RoutedEventArgs e)
         {
             try
@@ -68,6 +67,18 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             modelUnits.Items.Add(Units.Feet.ToString());
             modelUnits.Items.Add(Units.Inches.ToString());
 
+        }
+        private void FinDisclaimerButtonChildImage(object sender, RoutedEventArgs e)
+        {
+            Button disclaimerButton = sender as Button;
+            if (disclaimerButton != null)
+            {
+                Image heartImage = disclaimerButton.Template.FindName("heartImage", disclaimerButton) as Image;
+                if (heartImage != null)
+                {
+                    LoadImage(heartImage, HEART_IMAGE_PATH);
+                }
+            }
         }
         private void OffOn(bool toggle, string message, System.Windows.Media.Color color)
         {
@@ -106,5 +117,10 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         {
             this.DragMove();
         }
+        private void Title_Link(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://e-verse.com/");
+        }
+
     }
 }
