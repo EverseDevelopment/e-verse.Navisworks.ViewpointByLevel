@@ -4,12 +4,18 @@
   xmlns:System="clr-namespace:System;assembly=mscorlib"
   x:Class="Ductulator.Resources">
 
+    <!-- Font Family-->
+    <FontFamily x:Key="NeuzeitGrotesk">pack://application:,,,/Fonts/#Neuzeit Grotesk</FontFamily>
+
     <!-- Gray Scales-->
-    <SolidColorBrush x:Key="MainGray" Color="#707070"/>
-    <SolidColorBrush x:Key="SecondaryGray" Color="#d9d9d9"/>
-    <SolidColorBrush x:Key="BackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="MainGray" Color="#18263c"/>
+    <SolidColorBrush x:Key="SecondaryGray" Color="#8d8d8d"/>
+    <SolidColorBrush x:Key="AuxiliaryGray" Color="#a5b6bf"/>
+
+    <SolidColorBrush x:Key="HoverGray" Color="#e8e8e8"/>
+    <SolidColorBrush x:Key="BackgroundColor" Color="#e8e3df"/>
     <SolidColorBrush x:Key="WindowForeColor" Color="Transparent"/>
-    
+
     <!--Main Colours-->
     <SolidColorBrush x:Key="WindowButtonColor" Color="#F94F46"/>
     <SolidColorBrush x:Key="WindowButtonColorDim" Color="#ff8b85"/>
@@ -108,12 +114,20 @@
         <Setter Property="Template" Value="{StaticResource MainButtonStyleTemplate}"/>
         <Setter Property="FontFamily" Value="{StaticResource FormFamily}"/>
         <Setter Property="FontSize" Value="14px"/>
-        <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Background" Value="{StaticResource WindowButtonColor}"/>
         <Setter Property="ToolTipService.ShowDuration" Value="2000"/>
         <Setter Property="ToolTipService.InitialShowDelay" Value="1500"/>
         <Setter Property="Height"  Value="38"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource WindowButtonColorPressed}" />
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Background" Value="{StaticResource WindowButtonColor}" />
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
 
