@@ -50,7 +50,12 @@
                 RenderOptions.BitmapScalingMode="HighQuality" 
                 RenderOptions.EdgeMode="Aliased" 
                 Margin="10,7,0,357"/>-->
-                <Button Style="{DynamicResource CloseButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Width="28" Click="Close_Button" Height="28" RenderTransformOrigin="0.929,0.929"/>
+                <Button  
+                   Style="{DynamicResource TabCloseButtonStyle}"
+                   Name="CloseButton"  
+                   Click="Close_Button" 
+                   VerticalAlignment="Top" 
+                   Margin="307,18,10,0"></Button>
             </Grid>
             <Line Stroke="{DynamicResource MainGray}"
                   X2="1000"
