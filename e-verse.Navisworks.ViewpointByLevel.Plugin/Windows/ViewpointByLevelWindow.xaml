@@ -57,7 +57,7 @@
                   Opacity="0.5"
                   StrokeThickness="4"
                   VerticalAlignment="Top"
-                  Margin="-9,59,-9,0" RenderTransformOrigin="0.5,0.5" Height="2">
+                  Margin="0,59,0,0" RenderTransformOrigin="0.5,0.5" Height="2">
                 <Line.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="1"/>
@@ -134,7 +134,7 @@
                 Width="72"/>
             <Button
                     Style="{DynamicResource CloseButtonStyle}"
-                    Margin="185,365,10,0"
+                    Margin="185,365,0,0"
                     Background="Transparent"
                     Click="Title_Link"
                     FontWeight="Light"
@@ -154,13 +154,11 @@
                                     FontWeight="Bold" Grid.ColumnSpan="2">
                                 </TextBlock>
                                 <Image Name="heartImage"
-                                       Visibility="Visible" 
-                                       HorizontalAlignment="Left"
-                                       Width="20"
+                                       Visibility="Visible"
                                        SnapsToDevicePixels="True" 
                                        RenderOptions.BitmapScalingMode="HighQuality" 
                                        RenderOptions.EdgeMode="Aliased" 
-                                       Margin="66,-1,0,4" RenderTransformOrigin="0.5,0.5">
+                                       Margin="66,-1,0,4" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="20">
                                     <Image.RenderTransform>
                                         <TransformGroup>
                                             <ScaleTransform ScaleY="1"/>
