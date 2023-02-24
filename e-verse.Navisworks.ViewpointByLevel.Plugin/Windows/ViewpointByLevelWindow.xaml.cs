@@ -57,6 +57,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
                 {
                     modelsNames.Items.Add(model);
                 }
+                textBox.Text = "0";
                 OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.Gray);
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
