@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 using EVerse.Navisworks.ViewpointByLevel.Plugin.Windows;
+using System.Globalization;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
@@ -35,15 +36,17 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             {
                 using (Transaction t = new Transaction(oDoc, "Cutting Planes"))
                 {
-                    double offset = ComputeOffsetValue(mu);
+                    double offset = Tools.CutOffset;
+                    double recomputedOffset = (double)ComputeOffsetValue(mu, offset);
 
                     //Model Origin
-                    double originZ = gSystems.FirstOrDefault().Origin.Z;
-
+                    double originZ = gSystems[Tools.SelectedSystem].Origin.Z;
+                    
                     foreach (GridLevel level in gSystems[Tools.SelectedSystem].Levels)
                     {
-                        string elev = jview((-originZ - level.Elevation - offset).ToString());
-                        viewpointByLevelWindow.CreateViewpoint(elev, level.DisplayName, aView);
+                        double elevation = -originZ - level.Elevation - recomputedOffset;
+                        string elevationString = jview((elevation).ToString(CultureInfo.InvariantCulture));
+                        viewpointByLevelWindow.CreateViewpoint(elevationString, level.DisplayName, aView);
                     }
                     t.Commit();
                 }
@@ -51,10 +54,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             return 0;
         }
 
-        private static double ComputeOffsetValue(Tools.ModelUnits mu)
+        private static double ComputeOffsetValue(Tools.ModelUnits mu, double offset)
         {
-            //Offset for level
-            double offset = Tools.CutOffset;
             // get the selected units
             Enum.TryParse(Tools.SelectedUnits.ToString(), out Units selectedUnits);
             // get the model units
@@ -62,7 +63,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             // calculate the scale factor between two scales
             double scaleFactor = UnitConversion.ScaleFactor(modelUnits, selectedUnits);
             // calculate the new offset value
-            return offset *= scaleFactor;
+            double computedOffset = offset / scaleFactor;
+            return computedOffset;
         }
 
         private const string _jsonFileName = "clipPlaneTemplate.json";
