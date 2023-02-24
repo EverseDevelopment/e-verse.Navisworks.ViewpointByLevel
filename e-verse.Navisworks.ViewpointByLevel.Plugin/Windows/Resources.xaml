@@ -324,7 +324,18 @@
                             </ColorAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
-                    
+                    <VisualState x:Name="Enable">
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="normalBorder"
+                                                          Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                <EasingColorKeyFrame KeyTime="0" Value="Transparent" />
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="normalBorder"
+                                                          Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <EasingColorKeyFrame KeyTime="0" Value="Gray" />
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
                 </VisualStateGroup>
                 <VisualStateGroup x:Name="FocusStates">
                     <VisualState x:Name="Focused">
@@ -348,10 +359,10 @@
 
             <!-- main border, styling the border-brush and background for Normal state -->
             <Border x:Name="normalBorder" 
-                    Background="White"
+                    Background="Transparent"
                     BorderBrush="Gray"
                     BorderThickness="0.8 0.8 0.8 0.8"
-                    CornerRadius="15 15 15 15"/>
+                    CornerRadius="{StaticResource borderRadiusLarge}"/>
 
             <!-- styling border-brush and background-color for MouseOver state -->
             <!--<Border x:Name="hoverBorder" Opacity="0"
@@ -366,10 +377,10 @@
 
             <!-- styling border-brush and background-color for Focused state -->
             <Border x:Name="focusBorder" 
-                    Background="White"
+                    Background="Transparent"
                     BorderBrush="Gray"
                     BorderThickness="0.8 0.8 0.8 0.8"
-                    CornerRadius="{StaticResource borderRadius}"/>
+                    CornerRadius="{StaticResource borderRadiusLarge}"/>
             <!--<Border x:Name="focusBorder" Opacity="0"
                     BorderThickness="1">
                 <Border.BorderBrush>
@@ -397,7 +408,7 @@
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Foreground">
                     <Setter.Value>
-                        <SolidColorBrush Color="White"/>
+                        <SolidColorBrush Color="Gray"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -412,7 +423,7 @@
         <Setter Property="Height" Value="27"/>
         <Setter Property="Background">
             <Setter.Value>
-                <SolidColorBrush Color="White"/>
+                <SolidColorBrush Color="Transparent"/>
             </Setter.Value>
         </Setter>
         <Setter Property="Foreground">
