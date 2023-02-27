@@ -78,7 +78,7 @@
             <Label Style="{DynamicResource SecondaryLabel}" x:Name="notificationField" Content="Select a revit model" HorizontalAlignment="Left" Margin="41,144,0,0" VerticalAlignment="Top" Width="236" FontSize="12" FontWeight="Regular" />
             <TextBox Style="{DynamicResource MainTextBox}" IsEnabled="False" x:Name="textBox" Height="34" Margin="104,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" />
             <Label Style="{DynamicResource TitleLabels}" Content="Units" HorizontalAlignment="Left" Margin="22,190,0,0" VerticalAlignment="Top" Width="164" />
-            <Button Style="{DynamicResource MainButtonStyle}" x:Name="applyButton" IsEnabled="False" Content="Apply" Margin="96,383,96,0" VerticalAlignment="Top" Click="Apply_Button" Height="22" FontWeight="SemiBold" />
+            <Button Style="{DynamicResource ApplyButtonStyle}" x:Name="applyButton" IsEnabled="False" Content="Apply" Margin="96,383,96,0" VerticalAlignment="Top" Click="Apply_Button" Height="22" FontWeight="SemiBold" />
             <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="34" Margin="104,226,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="Units_SelectionChanged" />
             <Line Style="{DynamicResource DashedLine}"
                   Margin="22,277,22,0"/>
