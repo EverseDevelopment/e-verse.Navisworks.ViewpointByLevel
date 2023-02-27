@@ -99,6 +99,7 @@
                 Width="72" />
                 
             <Button
+                 Loaded="FinDisclaimerButtonChildImage"
                 Click="Title_Link"
                 Style="{DynamicResource CloseButtonStyle}"
                 BorderBrush="Transparent"
@@ -108,7 +109,7 @@
         VerticalContentAlignment="Stretch" Margin="144,424,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169">
                 <DockPanel LastChildFill="True">
                     <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Left">Made with</Label>
-                    <Image Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" Width="24" />
+                    <Image x:Name="heartImage" Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" Width="24" />
                     <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Right" Content="by e-verse"/>
                 </DockPanel>
             </Button>
