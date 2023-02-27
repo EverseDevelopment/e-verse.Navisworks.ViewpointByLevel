@@ -45,6 +45,7 @@
                 Visibility="Visible"
                 HorizontalAlignment="Left"
                 Width="54"
+                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_Head.png"
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderOptions.EdgeMode="Aliased"
