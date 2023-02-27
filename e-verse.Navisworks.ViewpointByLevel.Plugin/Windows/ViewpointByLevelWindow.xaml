@@ -96,56 +96,20 @@
                 Content="Offset:"
                 VerticalAlignment="Top"
                 Width="72" />
+                
             <Button
-                    Style="{DynamicResource CloseButtonStyle}"
-                    Margin="157,434,14,0"
-                    Background="Transparent"
-                    Click="Title_Link"
-                    FontWeight="Light"
-                    FontSize="12"
-                    Foreground="{DynamicResource MainGray}" Height="22" Loaded="FinDisclaimerButtonChildImage" VerticalAlignment="Top">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="243*" />
-                                    <ColumnDefinition Width="47*" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock
-                                    Text="Made with       by e-verse"
-                                    Margin="4,1,1,-1"
-                                    FontWeight="Bold" Grid.ColumnSpan="2">
-                                </TextBlock>
-                                <Image Name="heartImage"
-                                       Visibility="Visible"
-                                       SnapsToDevicePixels="True"
-                                       RenderOptions.BitmapScalingMode="HighQuality"
-                                       RenderOptions.EdgeMode="Aliased"
-                                       Margin="66,-1,0,4" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="20">
-                                    <Image.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform ScaleY="1" />
-                                            <SkewTransform />
-                                            <RotateTransform />
-                                            <TranslateTransform />
-                                        </TransformGroup>
-                                    </Image.RenderTransform>
-                                </Image>
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="True">
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.5" />
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.2" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Button.Template>
+                Click="Title_Link"
+                Style="{DynamicResource CloseButtonStyle}"
+                BorderBrush="Transparent"
+                Background="Transparent"
+                Foreground="{DynamicResource MainGray}"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch" Margin="144,424,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169">
+                <DockPanel LastChildFill="True">
+                    <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Left">Made with</Label>
+                    <Image Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" Width="24" />
+                    <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Right" Content="by e-verse"/>
+                </DockPanel>
             </Button>
             <Label
                 x:Name="versionLabel"
