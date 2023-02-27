@@ -31,7 +31,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         }
         private void InitializeValues()
         {
-            versionLabel.Content = "v.1.0.8";
+            versionLabel.Content = "v.1.0.9";
             LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
         }
 
