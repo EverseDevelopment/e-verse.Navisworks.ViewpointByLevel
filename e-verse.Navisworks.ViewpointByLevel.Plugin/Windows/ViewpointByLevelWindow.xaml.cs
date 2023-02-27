@@ -2,6 +2,7 @@
 using EVerse.Navisworks.ViewpointByLevel.Common;
 using EVerse.Navisworks.ViewpointByLevel.Plugin.Utils;
 using System;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -39,7 +40,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         {
             try
             {
-                Tools.CutOffset = Convert.ToDouble(textBox.Text);
+                Tools.CutOffset = Convert.ToDouble(textBox.Text, CultureInfo.InvariantCulture);
                 Tools.SelectedUnits = (UnitsEnum)SelectedUnits;
             }
             catch
@@ -57,7 +58,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
                 {
                     modelsNames.Items.Add(model);
                 }
-                OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.LightGray);
+                textBox.Text = "0";
+                OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.Gray);
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
         }

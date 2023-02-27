@@ -5,7 +5,7 @@
     {
       "Type": "ClipPlane",
       "Version": 1,
-      "Normal": [ -0, -0, -1 ],
+      "Normal": [ 0, 0, -1 ],
       "Distance": [ 0 ],
       "Enabled": true
     }
