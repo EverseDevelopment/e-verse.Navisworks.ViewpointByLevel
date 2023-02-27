@@ -20,16 +20,17 @@
     <SolidColorBrush x:Key="WindowButtonColor" Color="#F94F46"/>
     <SolidColorBrush x:Key="WindowButtonColorDim" Color="#ff8b85"/>
     <SolidColorBrush x:Key="WindowButtonColorPressed" Color="#ffc0bd"/>
-    
+
     <!--Corner Radius of small Elements-->
     <CornerRadius x:Key="borderRadius" BottomLeft="5" BottomRight="5" TopLeft="5" TopRight="5"/>
+    <CornerRadius x:Key="borderRadiusMedium" BottomLeft="11" BottomRight="11" TopLeft="11" TopRight="11"/>
     <!--Corner Radius of Large Elements-->
-    
     <CornerRadius x:Key="borderRadiusLarge" BottomLeft="15" BottomRight="15" TopLeft="15" TopRight="15"/>
+
     <System:Double x:Key="SecondaryFontSize">12</System:Double>
     <System:Double x:Key="MainFontSize">15</System:Double>
     <FontFamily x:Key="FormFamily">Roboto</FontFamily>
-     
+
     <!--Control template for Main forms-->
     <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
         <Grid Background="Transparent">
@@ -76,7 +77,7 @@
         <Setter Property="Template" Value="{StaticResource WindowTemplate}"/>
         <Setter Property="ResizeMode" Value="NoResize"/>
     </Style>
-    
+
 
     <!--MainButtons Custom template-->
     <ControlTemplate  x:Key="MainButtonStyleTemplate" TargetType="Button">
@@ -85,7 +86,7 @@
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}" 
                 Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                <ContentPresenter x:Name="contentPresenter" 
+            <ContentPresenter x:Name="contentPresenter" 
                                   ContentTemplate="{TemplateBinding ContentTemplate}" 
                                   Content="{TemplateBinding Content}" 
                                   ContentStringFormat="{TemplateBinding ContentStringFormat}" 
@@ -95,7 +96,7 @@
                                   RecognizesAccessKey="True" 
                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-            </Border>
+        </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="True">
             </Trigger>
@@ -108,10 +109,60 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <!--ApplyButtons Custom template-->
+    <ControlTemplate  x:Key="ApplyButtonStyleTemplate" TargetType="Button">
+        <Border x:Name="border" 
+                    CornerRadius="{StaticResource borderRadiusMedium}" 
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+            <ContentPresenter x:Name="contentPresenter" 
+                                  ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                  Content="{TemplateBinding Content}" 
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}" 
+                                  Focusable="False" 
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                  Margin="{TemplateBinding Padding}" 
+                                  RecognizesAccessKey="True" 
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefaulted" Value="True">
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
 
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
     <!--Customization of MainButtons template-->
     <Style x:Key="MainButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Template" Value="{StaticResource MainButtonStyleTemplate}"/>
+        <Setter Property="FontFamily" Value="{StaticResource FormFamily}"/>
+        <Setter Property="FontSize" Value="14px"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ToolTipService.ShowDuration" Value="2000"/>
+        <Setter Property="ToolTipService.InitialShowDelay" Value="1500"/>
+        <Setter Property="Height"  Value="38"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource WindowButtonColorPressed}" />
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Background" Value="{StaticResource WindowButtonColor}" />
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Customization of MainButtons template-->
+    <Style x:Key="ApplyButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template" Value="{StaticResource ApplyButtonStyleTemplate}"/>
         <Setter Property="FontFamily" Value="{StaticResource FormFamily}"/>
         <Setter Property="FontSize" Value="14px"/>
         <Setter Property="BorderThickness" Value="0"/>
@@ -170,10 +221,10 @@
     <!--SecondaryButtons Custom template-->
     <ControlTemplate  x:Key="LabelsTemplate" TargetType="Label">
         <Border>
-                <ContentPresenter HorizontalAlignment="Left"
+            <ContentPresenter HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                             RecognizesAccessKey="True" />
-            </Border>
+        </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsEnabled"
                    Value="true">
@@ -859,7 +910,7 @@
                             <ContentControl Grid.Column="1"
                                         Style="{StaticResource OffContentControl}" />
                         </Grid>
-                        
+
                         <Grid Background="Transparent">
                             <StackPanel HorizontalAlignment="Left"
                                     Orientation="Horizontal">
@@ -886,9 +937,9 @@
                         </Grid>
 
                     </Grid>
-                    
+
                     <ControlTemplate.Triggers>
-                        
+
                         <Trigger Property="IsChecked" Value="False">
                             <Setter TargetName="BackgroundBorder" 
                                     Property="Background"
@@ -906,7 +957,7 @@
                                     Property="Width" 
                                     Value="0" />
                         </Trigger>
-                        
+
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsChecked" Value="True"/>
@@ -916,7 +967,7 @@
                             <Setter TargetName="BackgroundEllipse1" Property="Fill" Value="#ffcfcc"/>
                             <Setter TargetName="BackgroundEllipse2" Property="Fill" Value="#ffcfcc"/>
                         </MultiTrigger>
-                        
+
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsChecked" Value="False"/>
@@ -972,16 +1023,16 @@
                             <Setter Property="Fill" TargetName="CheckMark" Value="{StaticResource MainGray}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
-                    
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
+
     </Style>
 
-    
-    
-    
+
+
+
     <Style x:Key="SliderButtonStyle"
        TargetType="{x:Type RepeatButton}">
         <Setter Property="SnapsToDevicePixels"
@@ -1036,7 +1087,7 @@
                         <Trigger Property="IsDragging" Value="True">
                             <Setter Property="Fill" TargetName="Ellipse" Value="{StaticResource WindowButtonColorPressed}"/>
                         </Trigger>
-                        
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -1168,7 +1219,7 @@
         </Setter>
     </Style>
 
-    
+
     <Style x:Key="ProgressBarStyle" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource BackgroundColor}"/>
         <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
@@ -1231,7 +1282,7 @@
                                 </Rectangle>
                             </Grid>
                         </Border>
-                        
+
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Orientation" Value="Vertical">
