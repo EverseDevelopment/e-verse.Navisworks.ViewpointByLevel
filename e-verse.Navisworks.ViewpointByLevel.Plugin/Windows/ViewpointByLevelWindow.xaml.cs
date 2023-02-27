@@ -19,7 +19,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
     {
         private const string NO_REVIT_MODEL_MESSAGE = "No revit model available";
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
-        //private const string ADDIN_IMAGE_PATH = "Images\\VL_32.jpg";
+        private const string ADDIN_IMAGE_PATH = "Images\\VL_Head.png";
         private const string HEART_IMAGE_PATH = "Images\\Heart.jpg";
 
         private int SelectedUnits { get; set; }
@@ -27,6 +27,12 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
+            InitializeValues();
+        }
+        private void InitializeValues()
+        {
+            versionLabel.Content = "v.1.0.8";
+            LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
         }
 
         private void LoadImage(Image image, string imagePath)
