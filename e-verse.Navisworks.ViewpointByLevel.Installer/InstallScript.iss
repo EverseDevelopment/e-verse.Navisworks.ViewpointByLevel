@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{77742920-E696-4FAE-80B7-D43148C6E668}
 AppName=ViewpointByLevel  
-AppVersion=1.0.7
+AppVersion=1.0.8
 AppPublisher=e-verse
 AppPublisherURL=-
 AppSupportURL=-
