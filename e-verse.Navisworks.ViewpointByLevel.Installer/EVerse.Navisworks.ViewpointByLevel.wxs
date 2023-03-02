@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="ca920446-c503-493f-8b3d-714350249797" Name="EVerse.Navisworks.ViewpointByLevel" Language="1033" Codepage="Windows-1252" Version="1.0.0.0" UpgradeCode="ca920446-c503-493f-8b3d-714340249796" Manufacturer="silic">
+    <Package InstallerVersion="200" Compressed="yes" SummaryCodepage="Windows-1252" Languages="1033" />
+    <Media Id="1" Cabinet="_...se.Navisworks.ViewpointByLevel.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="AppDataFolder" Name="AppDataFolder">
+        <Directory Id="AppDataFolder.Autodesk" Name="Autodesk">
+          <Directory Id="INSTALLDIR" Name="ApplicationPlugins">
+            <Directory Id="INSTALLDIR.2018" Name="2018">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1464777224" Guid="ca920446-c503-493f-8b3d-7143d0aee704">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_1464777224" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2018" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2018.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2018.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-7143b35f0e7c">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2018.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Directory Id="INSTALLDIR.2019" Name="2019">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1336106150" Guid="ca920446-c503-493f-8b3d-7143c107ecaf">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_1336106150" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2019" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2019.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2019.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-7143850b4e6b">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2019.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Directory Id="INSTALLDIR.2020" Name="2020">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1063108410" Guid="ca920446-c503-493f-8b3d-71437ee9d53e">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_1063108410" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2020" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2020.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2020.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-7143e47fdc9d">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2020.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Directory Id="INSTALLDIR.2021" Name="2021">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_3323248308" Guid="ca920446-c503-493f-8b3d-71437905717c">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_3323248308" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2021" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2021.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2021.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-7143751603f4">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2021.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Directory Id="INSTALLDIR.2022" Name="2022">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1787681285" Guid="ca920446-c503-493f-8b3d-71433360c772">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_1787681285" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2022" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2022.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2022.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-714326ec400b">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2022.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Directory Id="INSTALLDIR.2023" Name="2023">
+
+              <Component Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1425881067" Guid="ca920446-c503-493f-8b3d-7143d2f6918d">
+                <File Id="e2dverse.Navisworks.ViewpointByLevel.addin_1425881067" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin" />
+                <RemoveFolder Id="INSTALLDIR.2023" On="uninstall" />
+
+                <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                  <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                </RegistryKey>
+              </Component>
+
+              <Directory Id="INSTALLDIR.2023.e2dverse.Navisworks.ViewpointByLevel" Name="e-verse.Navisworks.ViewpointByLevel">
+
+                <Component Id="Component.INSTALLDIR.2023.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" Guid="ca920446-c503-493f-8b3d-71432b90569e">
+                  <CreateFolder />
+                  <RemoveFolder Id="INSTALLDIR.2023.e2dverse.Navisworks.ViewpointByLevel" On="uninstall" />
+
+                  <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                    <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                  </RegistryKey>
+                </Component>
+
+              </Directory>
+            </Directory>
+
+            <Component Id="INSTALLDIR" Guid="ca920446-c503-493f-8b3d-7143eb41fc6e">
+              <CreateFolder />
+              <RemoveFolder Id="INSTALLDIR" On="uninstall" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
+
+          </Directory>
+
+          <Component Id="AppDataFolder.Autodesk" Guid="ca920446-c503-493f-8b3d-7143e3822555">
+            <CreateFolder />
+            <RemoveFolder Id="AppDataFolder.Autodesk" On="uninstall" />
+
+            <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+              <RegistryValue Value="0" Type="string" KeyPath="yes" />
+            </RegistryKey>
+          </Component>
+
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <UI />
+
+    <UI>
+      <EmbeddedUI Id="WixSharp_EmbeddedUI_Asm" SourceFile="WixSharp.UI.CA.dll" />
+    </UI>
+
+    <CustomAction Id="WixSharp_InitRuntime_Action" BinaryKey="WixSharp_InitRuntime_Action_File" DllEntry="WixSharp_InitRuntime_Action" Return="check" Execute="immediate" />
+    <CustomAction Id="Set_CancelRequestHandler_Props" Property="CancelRequestHandler" Value="UpgradeCode=[UpgradeCode];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductCode=[ProductCode];ADDLOCAL=[ADDLOCAL];ADDFEATURES=[ADDFEATURES]" />
+    <CustomAction Id="CancelRequestHandler" BinaryKey="WixSharp_InitRuntime_Action_File" DllEntry="CancelRequestHandler" Return="check" Impersonate="no" Execute="deferred" />
+
+    <Binary Id="WixSharp_InitRuntime_Action_File" SourceFile="WixSharp.CA.dll" />
+    <Binary Id="WixSharp_UIText" SourceFile="EVerse.Navisworks.ViewpointByLevel.wxl" />
+    <Binary Id="WixSharp_LicenceFile" SourceFile="EVerse.Navisworks.ViewpointByLevel.licence.rtf" />
+    <Binary Id="WixUI_Bmp_Dialog" SourceFile="EVerse.Navisworks.ViewpointByLevel.dialog_bmp.png" />
+    <Binary Id="WixUI_Bmp_Banner" SourceFile="EVerse.Navisworks.ViewpointByLevel.dialog_banner.png" />
+
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <Property Id="WixSharp_UI_INSTALLDIR" Value="INSTALLDIR" />
+    <Property Id="UAC_REVEALER_ENABLED" Value="true" />
+    <Property Id="UAC_WARNING" Value="Please wait for UAC prompt to appear.&#xD;&#xA;&#xD;&#xA;If it appears minimized then activate it from the taskbar." />
+    <Property Id="WixSharp_InstallDialogs" Value="e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.WelcomeDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.LicenceDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.ProgressDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.ExitDialog" />
+    <Property Id="WixSharp_ModifyDialogs" Value="e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.MaintenanceTypeDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.FeaturesDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.ProgressDialog&#xA;e-verse.Navisworks.ViewpointByLevel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|EVerse.Navisworks.ViewpointByLevel.Installer.ExitDialog" />
+
+    <Feature Id="Complete" Title="Complete" Absent="allow" Level="1">
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1464777224" />
+      <ComponentRef Id="Component.INSTALLDIR.2018.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1336106150" />
+      <ComponentRef Id="Component.INSTALLDIR.2019.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1063108410" />
+      <ComponentRef Id="Component.INSTALLDIR.2020.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_3323248308" />
+      <ComponentRef Id="Component.INSTALLDIR.2021.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1787681285" />
+      <ComponentRef Id="Component.INSTALLDIR.2022.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_1425881067" />
+      <ComponentRef Id="Component.INSTALLDIR.2023.e2dverse.Navisworks.ViewpointByLevel.EmptyDirectory" />
+      <ComponentRef Id="INSTALLDIR" />
+      <ComponentRef Id="AppDataFolder.Autodesk" />
+    </Feature>
+
+    <InstallExecuteSequence>
+      <Custom Action="WixSharp_InitRuntime_Action" Before="AppSearch"> (1) </Custom>
+      <Custom Action="Set_CancelRequestHandler_Props" Before="InstallFinalize" />
+      <Custom Action="CancelRequestHandler" After="Set_CancelRequestHandler_Props"> (NOT (REMOVE="ALL")) </Custom>
+    </InstallExecuteSequence>
+
+  </Product>
+</Wix>
+
