@@ -156,13 +156,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Heart.png" />
+    <Resource Include="Resources\Heart.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.ico" />
+    <Resource Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ViewpointByLevel.png" />
+    <Resource Include="Resources\ViewpointByLevel.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
