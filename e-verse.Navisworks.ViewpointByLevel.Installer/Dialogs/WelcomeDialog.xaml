@@ -118,7 +118,7 @@
 
                                 <Image Name="heartImage" 
                                        Visibility="Visible" 
-                                       Source="/GltfInstaller;component/Resources/Heart.png"
+                                       Source="/e-verse.Navisworks.ViewpointByLevel;component/Resources/Heart.png"
                                        HorizontalAlignment="Left"
                                        Width="17" 
                                        SnapsToDevicePixels="True" 

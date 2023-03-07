@@ -8,8 +8,6 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
     {
         private static void Main()
         {
-
-
             var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel",
                               new Dir(@"%AppData%\Autodesk\ApplicationPlugins\",
                                   new Dir(@"2018",
