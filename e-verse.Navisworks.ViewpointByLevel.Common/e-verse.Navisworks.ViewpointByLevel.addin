@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <NavisworksAddIns>
 	<AddIn Type="Application">
-		<Name>Navisworks.ViewpointByLevel.addin</Name>
+		<Name>e-verse.Navisworks.ViewpointByLevel</Name>
 		<Assembly>e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.dll</Assembly>
-		<FullClassName>e-verse.Navisworks.ViewpointByLevel.ViewpointByLevelPlugin</FullClassName>
+		<FullClassName>e-verse.Navisworks.ViewpointByLevel.Plugin.ViewpointByLevelPlugin</FullClassName>
 		<Text>e-verse.Navisworks.ViewpointByLevel</Text>
 		<Description>e-verse.Navisworks.ViewpointByLevel</Description>
 		<VisibilityMode>AlwaysVisible</VisibilityMode>
