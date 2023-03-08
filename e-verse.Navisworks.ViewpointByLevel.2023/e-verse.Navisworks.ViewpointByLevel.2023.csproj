@@ -138,8 +138,8 @@ copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Plugin\clipPlaneTemplat
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\PackageContents.xml" "$(SolutionDir)$(SolutionName).bundle"
 
 if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25AppData%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
-mkdir "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
+if $(ConfigurationName) == Debug mkdir "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
 
-xcopy /e /s /h "$(SolutionDir)\$(SolutionName).bundle" "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"</PostBuildEvent>
+if $(ConfigurationName) == Debug xcopy /e /s /h "$(SolutionDir)\$(SolutionName).bundle" "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"</PostBuildEvent>
   </PropertyGroup>
 </Project>
