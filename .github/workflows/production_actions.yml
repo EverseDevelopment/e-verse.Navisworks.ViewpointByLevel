@@ -60,13 +60,7 @@ jobs:
     # Build the solution on the Release mode
     - name: Build and Publish App
       run: msbuild e-verse.Navisworks.ViewpointByLevel.sln /t:Clean,Build /p:platform="Any CPU" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-      
-    # Create the installer using WixSharp
-    - name: Create Installer
-      run: |
-        choco install wixsharp
-        wix e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.Installer.g.w
-        
+              
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
