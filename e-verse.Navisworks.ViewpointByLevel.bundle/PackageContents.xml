@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0"
+					AutodeskProduct="Naviswork"
+					Name="e-verse ViewpointByLevel Plugin"
+					Description="Viewpoint By Level"
+					AppVersion="1.0.0.0"
+					ProductType="Application"
+					SupportedLocales="Enu"
+					AppNameSpace="appstore.exchange.autodesk.com"
+					OnlineDocumentation=""
+					Author="e-verse"
+					ProductCode="{E613C70B-0D7F-4397-9F15-78D8E7B79BA3}"
+					UpgradeCode="{3C87E9FC-EC79-42D1-9D3B-34E00091A117}"
+					FriendlyVersion="1.0.0.0"
+					HelpFile=""
+					Icon="">
+	<CompanyDetails Name="e-verse" Url="http://www.e-verse.com" Email="contact@e-verse.com" Phone=" " />
+	<Components Description="2018">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw15" SeriesMax="Nw15" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2018/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+	<Components Description="2019">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw16" SeriesMax="Nw16" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2019/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+	<Components Description="2020">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw17" SeriesMax="Nw17" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2020/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+	<Components Description="2021">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw18" SeriesMax="Nw18" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2021/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+	<Components Description="2022">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw19" SeriesMax="Nw19" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2022/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+	<Components Description="2023">
+		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw20" SeriesMax="Nw20" />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2023/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+	</Components>
+</ApplicationPackage>
