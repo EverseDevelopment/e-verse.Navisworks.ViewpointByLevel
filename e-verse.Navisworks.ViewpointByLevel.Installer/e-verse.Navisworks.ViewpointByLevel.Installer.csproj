@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Tools.InnoSetup.6.2.1\build\Tools.InnoSetup.props" Condition="Exists('..\packages\Tools.InnoSetup.6.2.1\build\Tools.InnoSetup.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B975B732-82F7-40D5-8260-524D5306158D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EVerse.Navisworks.Plugin.Installer</RootNamespace>
-    <AssemblyName>EVerse.Navisworks.Plugin.Installer</AssemblyName>
+    <ProjectGuid>{1712F7FB-8F8E-4DBA-BB4C-A5475B716001}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EVerse.Navisworks.ViewpointByLevel</RootNamespace>
+    <AssemblyName>e-verse.Navisworks.ViewpointByLevel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,32 +36,161 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\ExitDialog.xaml.cs">
+      <DependentUpon>ExitDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FeaturesDialog.xaml.cs">
+      <DependentUpon>FeaturesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InstallDirDialog.xaml.cs">
+      <DependentUpon>InstallDirDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LicenseAgreementDialog.xaml.cs">
+      <DependentUpon>LicenseAgreementDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MaintenanceTypeDialog.xaml.cs">
+      <DependentUpon>MaintenanceTypeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Resources.xaml.cs">
+      <DependentUpon>Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SetupTypeDialog.xaml.cs">
+      <DependentUpon>SetupTypeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WelcomeDialog.xaml.cs">
+      <DependentUpon>WelcomeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ViewpointByLevel.nsi" />
+    <None Include="wix\$(ProjectName).g.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="InstallScript.iss" />
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Control.Draggable">
+      <Version>1.0.5049.269</Version>
+    </PackageReference>
+    <PackageReference Include="WixSharp">
+      <Version>1.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="WixSharp.bin">
+      <Version>1.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="WixSharp.wix.bin">
+      <Version>3.11.2</Version>
+    </PackageReference>
+    <PackageReference Include="WixSharp.WPF">
+      <Version>1.20.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Dialogs\ExitDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\FeaturesDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\InstallDirDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\LicenseAgreementDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\MaintenanceTypeDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\SetupTypeDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\WelcomeDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ViewpointByLevel.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2018\e-verse.Navisworks.ViewpointByLevel.2018.csproj">
+      <Project>{053472a7-30bb-4a3b-84bb-fb4e51ec2290}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2018</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2019\e-verse.Navisworks.ViewpointByLevel.2019.csproj">
+      <Project>{944d393f-9bb3-4c5f-9566-baaa4745a2ca}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2019</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2020\e-verse.Navisworks.ViewpointByLevel.2020.csproj">
+      <Project>{0d87a374-3b89-400e-9202-caff0b845936}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2021\e-verse.Navisworks.ViewpointByLevel.2021.csproj">
+      <Project>{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2021</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2022\e-verse.Navisworks.ViewpointByLevel.2022.csproj">
+      <Project>{4b97b73b-9157-4483-9269-b36fc42eaff7}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2022</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2023\e-verse.Navisworks.ViewpointByLevel.2023.csproj">
+      <Project>{37b80542-76c6-4592-a84e-b5f45d7150f2}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2023</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Tools.InnoSetup.6.2.1\build\Tools.InnoSetup.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tools.InnoSetup.6.2.1\build\Tools.InnoSetup.props'))" />
-  </Target>
-  <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
-
-if $(ConfigurationName) == Release "$(SolutionDir)packages\Tools.InnoSetup.6.2.1\tools\ISCC.exe" "$(ProjectDir)InstallScript.iss"</PostBuildEvent>
-  </PropertyGroup>
 </Project>
