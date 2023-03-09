@@ -61,6 +61,15 @@ jobs:
     - name: Build and Publish App
       run: msbuild e-verse.Navisworks.ViewpointByLevel.sln /t:Clean,Build /p:platform="Any CPU" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
       
+    - name: Install WiX Toolset
+      run: choco install wixtoolset
+
+    - name: Add WiX Toolset to PATH
+      run: |
+        echo 'export PATH="$PATH:/c/Program Files (x86)/WiX Toolset v3.11/bin"' >> $GITHUB_ENV
+        echo 'export WIX="%ProgramFiles(x86)%\WiX Toolset v3.11"' >> $GITHUB_ENV
+      shell: bash
+
     # Create the installer using WixSharp
     - name: Create Installer
       run: |
