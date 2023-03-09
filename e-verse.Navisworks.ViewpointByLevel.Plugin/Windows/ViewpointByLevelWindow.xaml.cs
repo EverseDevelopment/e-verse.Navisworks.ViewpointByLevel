@@ -21,7 +21,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
         private const string ADDIN_IMAGE_PATH = "Images\\VL_Head.png";
         private const string HEART_IMAGE_PATH = "Images\\Heart.jpg";
-
+        public const string PRODUCT_VERSION = "1.0.10";
         private int SelectedUnits { get; set; }
 
         public ViewpointByLevelWindow()
@@ -31,7 +31,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         }
         private void InitializeValues()
         {
-            versionLabel.Content = "v.1.0.9";
+            versionLabel.Content = string.Concat("v.", PRODUCT_VERSION);
             LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
         }
 

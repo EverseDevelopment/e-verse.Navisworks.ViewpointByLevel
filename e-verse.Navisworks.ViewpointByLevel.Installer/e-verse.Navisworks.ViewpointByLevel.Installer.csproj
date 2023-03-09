@@ -166,5 +166,31 @@
     <Resource Include="Resources\ViewpointByLevel.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2018\e-verse.Navisworks.ViewpointByLevel.2018.csproj">
+      <Project>{053472a7-30bb-4a3b-84bb-fb4e51ec2290}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2018</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2019\e-verse.Navisworks.ViewpointByLevel.2019.csproj">
+      <Project>{944d393f-9bb3-4c5f-9566-baaa4745a2ca}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2019</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2020\e-verse.Navisworks.ViewpointByLevel.2020.csproj">
+      <Project>{0d87a374-3b89-400e-9202-caff0b845936}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2021\e-verse.Navisworks.ViewpointByLevel.2021.csproj">
+      <Project>{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2021</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2022\e-verse.Navisworks.ViewpointByLevel.2022.csproj">
+      <Project>{4b97b73b-9157-4483-9269-b36fc42eaff7}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2022</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2023\e-verse.Navisworks.ViewpointByLevel.2023.csproj">
+      <Project>{37b80542-76c6-4592-a84e-b5f45d7150f2}</Project>
+      <Name>e-verse.Navisworks.ViewpointByLevel.2023</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
