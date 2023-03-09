@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EVerse.Navisworks.ViewpointByLevel.Plugin.Windows;
+using System;
 using System.IO;
 using WixSharp;
 using WixSharp.Nsis;
@@ -25,9 +26,13 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
             var destinationDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Autodesk", "ApplicationPlugins");
 
             // Create the project
-            var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel", new Dir(@destinationDirectory, new Dir(@"e-verse.Navisworks.ViewpointByLevel.bundle", files)));
+            var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel", new Dir(@destinationDirectory, new Dir(@"e-verse.Navisworks.ViewpointByLevel.bundle", files)))
+            {
+                GUID = new Guid("CA920446-C503-493F-8B3D-714340249796"),
+                Version = new Version(ViewpointByLevelWindow.PRODUCT_VERSION),
+            };
 
-            project.GUID = new Guid("CA920446-C503-493F-8B3D-714340249796");
+            project.ControlPanelInfo.Manufacturer = "e-verse";
 
             // project.ManagedUI = ManagedUI.DefaultWpf; // all stock UI dialogs
 
