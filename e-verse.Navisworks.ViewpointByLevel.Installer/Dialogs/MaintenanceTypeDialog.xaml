@@ -109,13 +109,13 @@
 
             <Button
                     Style="{DynamicResource CloseButtonStyle}"
-                    Margin="332,376,13,0"
+                    Margin="332,220,13,0"
                     Background="Transparent"
                     Click="Contact_Link"
                     FontWeight="Light"
                     FontSize="12"     
                     Foreground="{DynamicResource MainGray}"
-                    VerticalAlignment="Top" Height="20">
+                    VerticalAlignment="Top" Height="20" Grid.Row="2">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
