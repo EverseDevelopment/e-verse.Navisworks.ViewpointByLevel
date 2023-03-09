@@ -60,22 +60,7 @@ jobs:
     # Build the solution on the Release mode
     - name: Build and Publish App
       run: msbuild e-verse.Navisworks.ViewpointByLevel.sln /t:Clean,Build /p:platform="Any CPU" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-      
-    - name: Install WiX Toolset
-      run: choco install wixtoolset
 
-    - name: Add WiX Toolset to PATH
-      run: |
-        echo 'export PATH="$PATH:/c/Program Files (x86)/WiX Toolset v3.11/bin"' >> $GITHUB_ENV
-        echo 'export WIX="%ProgramFiles(x86)%\WiX Toolset v3.11"' >> $GITHUB_ENV
-      shell: bash
-
-    # Create the installer using WixSharp
-    - name: Create Installer
-      run: |
-        choco install wixsharp
-        wix# e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.Installer.g.w
-        
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
