@@ -74,7 +74,7 @@ jobs:
     - name: Create Installer
       run: |
         choco install wixsharp
-        wix e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.Installer.g.w
+        wix# e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.Installer.g.w
         
     - name: Create Release
       id: create_release
