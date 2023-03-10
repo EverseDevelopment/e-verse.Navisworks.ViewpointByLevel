@@ -62,7 +62,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
                                         new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*")))
                               )))));
 
-            project.GUID = new Guid("CA920446-C503-493F-8B3D-714340249796");
+            project.GUID = new Guid("949A974F-2B58-40FE-BA53-0C74D5870368");
             project.Version = new Version(ViewpointByLevelWindow.PRODUCT_VERSION);
 
             project.ControlPanelInfo.Manufacturer = "e-verse";
