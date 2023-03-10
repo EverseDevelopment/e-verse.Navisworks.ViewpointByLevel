@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 /EVerse.Navisworks.Plugin.Installer/Installer
 /e-verse.Navisworks.ViewpointByLevel.Installer/Installer
+/e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.msi
+/e-verse.Navisworks.ViewpointByLevel.Installer/e-verse.Navisworks.ViewpointByLevel.exe
