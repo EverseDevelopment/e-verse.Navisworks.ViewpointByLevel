@@ -1,6 +1,5 @@
 ﻿using EVerse.Navisworks.ViewpointByLevel.Plugin.Windows;
 using System;
-using System.IO;
 using WixSharp;
 using WixSharp.Nsis;
 
@@ -10,27 +9,61 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
     {
         private static void Main()
         {
-            // Get the directory path of the solution
-            // Get the directory path of the current executable
-            var exeDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel",
+                              new Dir(@"%AppData%\Autodesk\ApplicationPlugins", new Dir(@"e-verse.Navisworks.ViewpointByLevel.bundle", new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\PackageContents.xml"),
+                              new Dir(@"Contents", new Dir(@"dlls",
+                              new Dir(@"2018",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2018\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
+                                        new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2019",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2019\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
+                                    new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2020",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2020\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
+                                    new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2021",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2021\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
+                                        new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2022",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2022\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                    new Dir(@"en-US",
+                                        new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                        new Dir(@"Images",
+                                        new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2023",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2023\bin\Release\e-verse.Navisworks.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.addin"),
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
+                                        new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*")))
+                              )))));
 
-            // Get the solution directory path by finding the first .sln file in the parent directories
-            var solutionDirectory = Directory.GetParent(exeDirectory).Parent.Parent.FullName;
-
-            // Get the folder path by combining the solution directory path with the folder name
-            var sourceFolder = Path.Combine(solutionDirectory, "e-verse.Navisworks.ViewpointByLevel.bundle");
-
-            var files = Files.FromBuildDir(@sourceFolder, ".dll|.xml|.json|.jpg|.png|.xaml|.addin");
-            files.Attributes.Add("Component:SharedDllRefCount", "yes");
-
-            var destinationDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Autodesk", "ApplicationPlugins");
-
-            // Create the project
-            var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel", new Dir(@destinationDirectory, new Dir(@"e-verse.Navisworks.ViewpointByLevel.bundle", files)))
-            {
-                GUID = new Guid("CA920446-C503-493F-8B3D-714340249796"),
-                Version = new Version(ViewpointByLevelWindow.PRODUCT_VERSION),
-            };
+            project.GUID = new Guid("CA920446-C503-493F-8B3D-714340249796");
+            project.Version = new Version(ViewpointByLevelWindow.PRODUCT_VERSION);
 
             project.ControlPanelInfo.Manufacturer = "e-verse";
 
