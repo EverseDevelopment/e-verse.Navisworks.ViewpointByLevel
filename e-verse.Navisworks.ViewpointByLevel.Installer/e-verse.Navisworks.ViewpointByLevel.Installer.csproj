@@ -165,7 +165,6 @@
   <ItemGroup>
     <Resource Include="Resources\ViewpointByLevel.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2018\e-verse.Navisworks.ViewpointByLevel.2018.csproj">
       <Project>{053472a7-30bb-4a3b-84bb-fb4e51ec2290}</Project>
