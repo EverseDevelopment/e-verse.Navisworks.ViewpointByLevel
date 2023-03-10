@@ -78,6 +78,14 @@
                         </RegistryKey>
                       </Component>
 
+                      <Component Id="Component.ViewpointByLevel.png_3084796745" Guid="ca920446-c503-493f-8b3d-71439afa3fd2">
+                        <File Id="ViewpointByLevel.png_3084796745" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
                       <Component Id="Component.VL_32.jpg_91124561" Guid="ca920446-c503-493f-8b3d-7143f8e8dafe">
                         <File Id="VL_32.jpg_91124561" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_32.jpg" />
 
@@ -142,6 +150,14 @@
                       <Component Id="Component.Heart.jpg_2154985722" Guid="ca920446-c503-493f-8b3d-71432964095b">
                         <File Id="Heart.jpg_2154985722" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" />
                         <RemoveFolder Id="INSTALLDIR.Contents.dlls.2019.Images" On="uninstall" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
+                      <Component Id="Component.ViewpointByLevel.png_2276133093" Guid="ca920446-c503-493f-8b3d-714375156fa5">
+                        <File Id="ViewpointByLevel.png_2276133093" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
 
                         <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
                           <RegistryValue Value="0" Type="string" KeyPath="yes" />
@@ -218,6 +234,14 @@
                         </RegistryKey>
                       </Component>
 
+                      <Component Id="Component.ViewpointByLevel.png_3161985590" Guid="ca920446-c503-493f-8b3d-7143fdd32dca">
+                        <File Id="ViewpointByLevel.png_3161985590" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
                       <Component Id="Component.VL_32.jpg_2455923027" Guid="ca920446-c503-493f-8b3d-714384c3b9ee">
                         <File Id="VL_32.jpg_2455923027" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_32.jpg" />
 
@@ -282,6 +306,14 @@
                       <Component Id="Component.Heart.jpg_2618297950" Guid="ca920446-c503-493f-8b3d-7143d4789c89">
                         <File Id="Heart.jpg_2618297950" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" />
                         <RemoveFolder Id="INSTALLDIR.Contents.dlls.2021.Images" On="uninstall" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
+                      <Component Id="Component.ViewpointByLevel.png_505124237" Guid="ca920446-c503-493f-8b3d-71439a6f047a">
+                        <File Id="ViewpointByLevel.png_505124237" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
 
                         <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
                           <RegistryValue Value="0" Type="string" KeyPath="yes" />
@@ -358,6 +390,14 @@
                         </RegistryKey>
                       </Component>
 
+                      <Component Id="Component.ViewpointByLevel.png_2473254506" Guid="ca920446-c503-493f-8b3d-7143a1dc7c1c">
+                        <File Id="ViewpointByLevel.png_2473254506" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
                       <Component Id="Component.VL_32.jpg_350458319" Guid="ca920446-c503-493f-8b3d-71436a0a2917">
                         <File Id="VL_32.jpg_350458319" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_32.jpg" />
 
@@ -422,6 +462,14 @@
                       <Component Id="Component.Heart.jpg_3819516451" Guid="ca920446-c503-493f-8b3d-7143e8d13368">
                         <File Id="Heart.jpg_3819516451" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" />
                         <RemoveFolder Id="INSTALLDIR.Contents.dlls.2023.Images" On="uninstall" />
+
+                        <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                          <RegistryValue Value="0" Type="string" KeyPath="yes" />
+                        </RegistryKey>
+                      </Component>
+
+                      <Component Id="Component.ViewpointByLevel.png_2637686402" Guid="ca920446-c503-493f-8b3d-7143dc8d6d82">
+                        <File Id="ViewpointByLevel.png_2637686402" Source="..\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png" />
 
                         <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
                           <RegistryValue Value="0" Type="string" KeyPath="yes" />
@@ -521,6 +569,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_2288848115" />
       <ComponentRef Id="Component.PluginRibbon.xaml_2028103134" />
       <ComponentRef Id="Component.Heart.jpg_1637385466" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_3084796745" />
       <ComponentRef Id="Component.VL_32.jpg_91124561" />
       <ComponentRef Id="Component.VL_Head.png_1501003611" />
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.dll_2203357263" />
@@ -528,6 +577,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_2786512173" />
       <ComponentRef Id="Component.PluginRibbon.xaml_2491324197" />
       <ComponentRef Id="Component.Heart.jpg_2154985722" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_2276133093" />
       <ComponentRef Id="Component.VL_32.jpg_576072135" />
       <ComponentRef Id="Component.VL_Head.png_3766620089" />
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.dll_2297295585" />
@@ -535,6 +585,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_152937488" />
       <ComponentRef Id="Component.PluginRibbon.xaml_1102713016" />
       <ComponentRef Id="Component.Heart.jpg_3946760455" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_3161985590" />
       <ComponentRef Id="Component.VL_32.jpg_2455923027" />
       <ComponentRef Id="Component.VL_Head.png_314165012" />
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.dll_123492167" />
@@ -542,6 +593,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_3215564426" />
       <ComponentRef Id="Component.PluginRibbon.xaml_1310905662" />
       <ComponentRef Id="Component.Heart.jpg_2618297950" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_505124237" />
       <ComponentRef Id="Component.VL_32.jpg_1078052598" />
       <ComponentRef Id="Component.VL_Head.png_1598625981" />
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.dll_2190477390" />
@@ -549,6 +601,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_3027390729" />
       <ComponentRef Id="Component.PluginRibbon.xaml_3996303948" />
       <ComponentRef Id="Component.Heart.jpg_2432538611" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_2473254506" />
       <ComponentRef Id="Component.VL_32.jpg_350458319" />
       <ComponentRef Id="Component.VL_Head.png_1877159503" />
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.dll_193727033" />
@@ -556,6 +609,7 @@
       <ComponentRef Id="Component.e2dverse.Navisworks.ViewpointByLevel.addin_753782071" />
       <ComponentRef Id="Component.PluginRibbon.xaml_3722198842" />
       <ComponentRef Id="Component.Heart.jpg_3819516451" />
+      <ComponentRef Id="Component.ViewpointByLevel.png_2637686402" />
       <ComponentRef Id="Component.VL_32.jpg_2610293049" />
       <ComponentRef Id="Component.VL_Head.png_3710515041" />
       <ComponentRef Id="AppDataFolder.Autodesk" />
