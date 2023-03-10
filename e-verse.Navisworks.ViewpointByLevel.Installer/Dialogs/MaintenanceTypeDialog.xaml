@@ -77,7 +77,7 @@
                     Background="Transparent"
                     FontSize="16"
                     FontWeight="ExtraLight"
-                    Text="Hope you had fun playing with Leia!" Grid.Row="2"/>
+                    Grid.Row="2"><Run Text="Hope you had fun playing with "/><Run Language="es-es" Text="Vero"/><Run Text="!"/></TextBlock>
 
             <Button
                 Style="{DynamicResource MainButtonStyle}"
