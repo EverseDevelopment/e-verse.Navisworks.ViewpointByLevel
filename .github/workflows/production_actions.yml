@@ -53,10 +53,6 @@ jobs:
     - name: Restore NuGet Packages
       run: nuget restore e-verse.Navisworks.ViewpointByLevel.sln
       
-    # Change the version inside of the 'Product.wxs' file
-    - name: Setting new version to the 'Product.wxs' file
-      run: (Get-Content e-verse.Navisworks.ViewpointByLevel.Installer/wix/e-verse.Navisworks.ViewpointByLevel.Installer.g.wxs) -replace 'Version="1.0.0"', 'Version="${{ steps.gitversion.outputs.majorMinorPatch }}"' | Out-File -encoding ASCII e-verse.Navisworks.ViewpointByLevel.Installer/wix/e-verse.Navisworks.ViewpointByLevel.Installer.g.wxs
-
     # Build the solution on the Release mode
     - name: Build and Publish App
       run: msbuild e-verse.Navisworks.ViewpointByLevel.sln /t:Clean,Build /p:platform="Any CPU" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
