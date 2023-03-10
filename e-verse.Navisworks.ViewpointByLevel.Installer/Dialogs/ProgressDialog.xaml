@@ -66,7 +66,7 @@
                     Background="Transparent"
                     FontSize="16"
                     FontWeight="ExtraLight"
-                    Text="We're installing LEIA for you." HorizontalAlignment="Left" Width="208"/>
+                    HorizontalAlignment="Left" Width="208"><Run Text="We're installing"/><Run Language="es-es" Text=" VERO"/><Run Text=" for you."/></TextBlock>
             <TextBlock
                     Margin="112,136,112,246"
                     Background="Transparent"
