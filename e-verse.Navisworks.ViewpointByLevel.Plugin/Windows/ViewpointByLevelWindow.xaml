@@ -44,12 +44,12 @@
                 <Image x:Name="ComponentImage"
                 Visibility="Visible"
                 HorizontalAlignment="Left"
-                Width="120"
+                Width="135"
                 Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png"
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderOptions.EdgeMode="Aliased"
-                Margin="10,18,0,0" Height="29" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                Margin="10,18,0,0" Height="28" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
