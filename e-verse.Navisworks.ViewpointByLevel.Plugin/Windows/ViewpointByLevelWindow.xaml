@@ -28,7 +28,7 @@
         Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1,1,1,1"
-            CornerRadius="8,8,8,8"
+            CornerRadius="15,15,15,15"
             Margin="10,10,10,10"
             MouseDown="Border_MouseDown">
         <Border.Effect>
@@ -39,17 +39,26 @@
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
         <Grid>
-            <Grid Margin="0,0,10,0">
+            <Grid>
 
                 <Image x:Name="ComponentImage"
                 Visibility="Visible"
                 HorizontalAlignment="Left"
-                Width="54"
-                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\VL_Head.png"
+                Width="135"
+                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png"
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderOptions.EdgeMode="Aliased"
-                Margin="10,11,0,0" Height="46" VerticalAlignment="Top" />
+                Margin="10,18,0,0" Height="28" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
                 <Button
                    Style="{DynamicResource TabCloseButtonStyle}"
                    Name="CloseButton"
@@ -97,7 +106,7 @@
                 Content="Offset:"
                 VerticalAlignment="Top"
                 Width="72" />
-                
+
             <Button
                  Loaded="FinDisclaimerButtonChildImage"
                 Click="Title_Link"

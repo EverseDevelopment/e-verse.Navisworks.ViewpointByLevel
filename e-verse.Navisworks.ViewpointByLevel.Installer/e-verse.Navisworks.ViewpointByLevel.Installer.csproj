@@ -163,9 +163,6 @@
     <Resource Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\ViewpointByLevel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\e-verse.Navisworks.ViewpointByLevel.2018\e-verse.Navisworks.ViewpointByLevel.2018.csproj">
       <Project>{053472a7-30bb-4a3b-84bb-fb4e51ec2290}</Project>
       <Name>e-verse.Navisworks.ViewpointByLevel.2018</Name>
@@ -190,6 +187,9 @@
       <Project>{37b80542-76c6-4592-a84e-b5f45d7150f2}</Project>
       <Name>e-verse.Navisworks.ViewpointByLevel.2023</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ViewpointByLevel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

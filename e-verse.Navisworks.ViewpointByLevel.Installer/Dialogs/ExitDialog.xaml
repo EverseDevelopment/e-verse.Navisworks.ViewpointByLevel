@@ -16,7 +16,7 @@
             Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1" 
-            CornerRadius="8,8,8,8"
+            CornerRadius="15,15,15,15"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
         <!--<Border.Effect>
@@ -39,16 +39,17 @@
                     Height="50" 
                     FontSize="20" 
                     FontWeight="Light" 
-                    Margin="20,10,362,0" VerticalAlignment="Top">
+                    Margin="20,10,330,0" VerticalAlignment="Top">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-                        <Border x:Name="border" Width="290" Background="Transparent">
+                        <Border x:Name="border" Width="235" Background="Transparent">
                             <Grid>
                                 <Image Name="SlideUp_Image" 
                                        Visibility="Visible" 
                                        Source="/e-verse.Navisworks.ViewpointByLevel;component/Resources/ViewpointByLevel.png"
                                        HorizontalAlignment="Left"
-                                       Width="115" 
+                                       Width="135" 
+                                       Height="28"
                                        SnapsToDevicePixels="True" 
                                        RenderOptions.BitmapScalingMode="HighQuality" 
                                        RenderOptions.EdgeMode="Aliased" 
@@ -68,6 +69,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+
 
             <Button
                     Style="{DynamicResource CloseButtonStyle}"

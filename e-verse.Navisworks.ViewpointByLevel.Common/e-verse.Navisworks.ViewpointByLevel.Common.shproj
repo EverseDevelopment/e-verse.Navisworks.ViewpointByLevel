@@ -25,8 +25,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="e-verse.Navisworks.ViewpointByLevel.addin" />
-    <Content Include="Images\VL_Head.png" />
     <Content Include="Images\Heart.jpg" />
+    <Content Include="Images\ViewpointByLevel.png" />
     <Content Include="Images\VL_32.jpg" />
     <Content Include="PackageContents.xml" />
   </ItemGroup>
