@@ -15,7 +15,7 @@
             Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1" 
-            CornerRadius="8,8,8,8" HorizontalAlignment="Left" Width="497" Height="409" VerticalAlignment="Bottom">
+            CornerRadius="15,15,15,15" HorizontalAlignment="Left" Width="497" Height="409" VerticalAlignment="Bottom">
 
         <Grid x:Name="Root">
 

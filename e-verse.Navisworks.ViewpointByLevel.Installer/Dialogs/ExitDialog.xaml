@@ -16,7 +16,7 @@
             Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1" 
-            CornerRadius="8,8,8,8"
+            CornerRadius="15,15,15,15"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
         <!--<Border.Effect>

@@ -28,7 +28,7 @@
         Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1,1,1,1"
-            CornerRadius="8,8,8,8"
+            CornerRadius="15,15,15,15"
             Margin="10,10,10,10"
             MouseDown="Border_MouseDown">
         <Border.Effect>
@@ -39,7 +39,7 @@
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
         <Grid>
-            <Grid Margin="0,0,10,0">
+            <Grid>
 
                 <Image x:Name="ComponentImage"
                 Visibility="Visible"
