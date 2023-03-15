@@ -17,7 +17,7 @@
             BorderThickness="1" 
             CornerRadius="15,15,15,15" HorizontalAlignment="Left" Width="497" Height="409" VerticalAlignment="Bottom">
 
-        <Grid x:Name="Root">
+        <Grid x:Name="Root" Background="Transparent" Margin="-1,0,-1,0">
 
             <Button 
                     Style="{DynamicResource CloseButtonStyle}" 

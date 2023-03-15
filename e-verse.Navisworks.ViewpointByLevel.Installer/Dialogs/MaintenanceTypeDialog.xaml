@@ -74,11 +74,11 @@
                     FontWeight="Bold"
                     Text="Welcome Back!" RenderTransformOrigin="0.494,0.501"/>
             <TextBlock
-                    Margin="130,50,114,172"
+                    Margin="108,50,108,172"
                     Background="Transparent"
                     FontSize="16"
                     FontWeight="ExtraLight"
-                    Grid.Row="2"><Run Text="Hope you had fun playing with "/><Run Language="es-es" Text="Vero"/><Run Text="!"/></TextBlock>
+                    Grid.Row="2"><Run Text="Hope you had fun playing with "/><Run Text="Vero"/><Run Language="es-es" Text="nica"/><Run Text="!"/></TextBlock>
 
             <Button
                 Style="{DynamicResource MainButtonStyle}"
