@@ -15,7 +15,7 @@
             Background="{DynamicResource BackgroundColor}"
             BorderBrush="Transparent"
             BorderThickness="1" 
-            CornerRadius="8,8,8,8"
+            CornerRadius="15,15,15,15"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
 
@@ -63,11 +63,11 @@
             </Button>
 
             <TextBlock
-                    Margin="150,106,0,276"
+                    Margin="140,106,0,276"
                     Background="Transparent"
                     FontSize="16"
                     FontWeight="ExtraLight"
-                    HorizontalAlignment="Left" Width="208"><Run Text="We're installing"/><Run Language="es-es" Text=" VERO"/><Run Text=" for you."/></TextBlock>
+                    HorizontalAlignment="Left" Width="227"><Run Text="We're installing"/><Run Text=" V"/><Run Text="erocina"/><Run Text=" for you."/></TextBlock>
             <TextBlock
                     Margin="112,136,112,246"
                     Background="Transparent"

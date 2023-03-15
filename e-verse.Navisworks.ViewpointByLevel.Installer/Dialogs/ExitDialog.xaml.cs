@@ -79,7 +79,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
             if (DialogDescription.Text == "Click the Finish button to exit the Setup Wizard.")
             {
                 DialogDescription.Text = "Congratulations! The process is complete. " +
-                    "\n Thanks for trusting in our heroine VERO! " +
+                    "\n Thanks for trusting in our heroine Veronica! " +
                     "\n \n Are you interested in taking part in our next \n " +
                     "projects?";
             }
