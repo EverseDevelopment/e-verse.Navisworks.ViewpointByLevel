@@ -66,11 +66,10 @@
                 </Button>
 
                 <TextBlock
-                    Margin="140,106,0,276"
+                    Margin="140,106,126,276"
                     Background="Transparent"
                     FontSize="16"
-                    FontWeight="ExtraLight"
-                    HorizontalAlignment="Left" Width="227"><Run Text="We're installing"/><Run Text=" V"/><Run Text="erocina"/><Run Text=" for you."/></TextBlock>
+                    FontWeight="ExtraLight"><Run Text="We're installing"/><Run Text=" V"/><Run Text="erocina"/><Run Text=" for you."/></TextBlock>
                 <TextBlock
                     Margin="112,136,112,246"
                     Background="Transparent"
