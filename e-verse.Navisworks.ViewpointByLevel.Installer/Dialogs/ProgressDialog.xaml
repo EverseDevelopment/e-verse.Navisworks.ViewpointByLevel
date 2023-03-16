@@ -77,7 +77,6 @@
                     FontSize="16"
                     FontWeight="ExtraLight"
                     Text="May the force of this addon be with you."/>
-
                 <ProgressBar
                 Style="{DynamicResource ProgressBarStyle}" 
                 Margin="122,237,115,162"
@@ -93,6 +92,7 @@
                         </TransformGroup>
                     </ProgressBar.RenderTransform>
                 </ProgressBar>
+
 
                 <Button Style="{DynamicResource MainButtonStyle}"   
                     x:Name="GoNext"
