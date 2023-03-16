@@ -6,7 +6,7 @@
 </auto-generated>
 -->
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="949a974f-2b58-40fe-ba53-0c74e587f368" Name="e-verse.Navisworks.ViewpointByLevel" Language="1033" Codepage="Windows-1252" Version="1.0.14" UpgradeCode="949a974f-2b58-40fe-ba53-0c74d5870368" Manufacturer="e-verse">
+  <Product Id="949a974f-2b58-40fe-ba53-0c74e5880368" Name="e-verse.Navisworks.ViewpointByLevel" Language="1033" Codepage="Windows-1252" Version="1.0.15" UpgradeCode="949a974f-2b58-40fe-ba53-0c74d5870368" Manufacturer="e-verse">
     <Package InstallerVersion="200" Compressed="yes" SummaryCodepage="Windows-1252" Languages="1033" />
     <Media Id="1" Cabinet="_...se.Navisworks.ViewpointByLevel.cab" EmbedCab="yes" />
 

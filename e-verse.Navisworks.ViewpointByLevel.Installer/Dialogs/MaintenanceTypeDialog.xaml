@@ -9,8 +9,10 @@
     d:DesignWidth="510"
     DialogTitle="[ProductName] Setup"
     mc:Ignorable="d">
-
-    <Border
+    <Viewbox>
+        <Border
+            Height="424"
+            Width="510"
             Margin="5,5,5,5"
             Background="#e8e3df"
             BorderBrush="Transparent"
@@ -19,13 +21,9 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
 
-        <Grid x:Name="Root" Background="Transparent" Margin="-1,0,-1,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="212*"/>
-                <RowDefinition Height="0*"/>
-                <RowDefinition Height="347*"/>
-            </Grid.RowDefinitions>
-            <Button 
+            <Grid x:Name="Root" Background="Transparent">
+
+                <Button 
                     Style="{DynamicResource CloseButtonStyle}" 
                     Name="TitleButton" 
                     Foreground="Black" 
@@ -36,11 +34,11 @@
                     FontSize="20" 
                     FontWeight="Light" 
                     Margin="20,10,330,0" VerticalAlignment="Top">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="border" Width="235" Background="Transparent">
-                            <Grid>
-                                <Image Name="SlideUp_Image" 
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" Width="235" Background="Transparent">
+                                <Grid>
+                                    <Image Name="SlideUp_Image" 
                                        Visibility="Visible" 
                                        Source="/e-verse.Navisworks.ViewpointByLevel;component/Resources/ViewpointByLevel.png"
                                        HorizontalAlignment="Left"
@@ -50,88 +48,78 @@
                                        RenderOptions.BitmapScalingMode="HighQuality" 
                                        RenderOptions.EdgeMode="Aliased" 
                                        Margin="2,5,0,5"/>
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers >
-                            <Trigger Property="IsDefaulted" Value="True">
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers >
+                                <Trigger Property="IsDefaulted" Value="True">
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
 
-            <TextBlock
-                    Margin="152,108,152,6"
+                <TextBlock
+                    Margin="152,108,152,277"
                     Background="Transparent"
                     FontSize="26"
                     FontWeight="Bold"
                     Text="Welcome Back!" RenderTransformOrigin="0.494,0.501"/>
-            <TextBlock
-                    Margin="130,50,114,172"
+                <TextBlock
+                    Margin="108,220,108,172"
                     Background="Transparent"
                     FontSize="16"
-                    FontWeight="ExtraLight"
-                    Grid.Row="2"><Run Text="Hope you had fun playing with "/><Run Language="es-es" Text="Vero"/><Run Text="!"/></TextBlock>
+                    FontWeight="ExtraLight"><Run Text="Hope you had fun playing with "/><Run Text="Vero"/><Run Language="es-es" Text="nica"/><Run Text="!"/></TextBlock>
 
-            <Button
+                <Button
                 Style="{DynamicResource MainButtonStyle}"
                 x:Name="Repair"
-                Grid.Row="1"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" 
-                Margin="46,153,0,0" 
-                Content="Repair" Grid.RowSpan="2" Width="180">
-            </Button>
+                HorizontalAlignment="Left" 
+                Margin="48,300,0,84" 
+                Content="Repair" Width="180" Height="NaN"/>
 
 
-            <Button
+                <Button
                 Style="{DynamicResource MainButtonStyle}"
-                x:Name="Remove"
-                Grid.Row="2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" 
-                Margin="272,153,0,0" 
-                Width="180"
-                Content="Remove">
-            </Button>
+                x:Name="Remove" 
+                Margin="282,300,48,84"
+                Content="Remove" Height="NaN"/>
 
-            <Button 
+                <Button 
                    Style="{DynamicResource TabCloseButtonStyle}"
                    Name="Cancel"
                    VerticalAlignment="Top" 
                    Margin="452,13,17,0"/>
 
-            <Button
+                <Button
                     Style="{DynamicResource CloseButtonStyle}"
-                    Margin="332,220,13,0"
+                    Margin="335,382,20,20"
                     Background="Transparent"
                     Click="Contact_Link"
                     FontWeight="Light"
                     FontSize="12"     
-                    Foreground="{DynamicResource MainGray}"
-                    VerticalAlignment="Top" Height="20" Grid.Row="2">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="243*"/>
-                                    <ColumnDefinition Width="47*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock
+                    Foreground="{DynamicResource MainGray}" Height="NaN">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="243*"/>
+                                        <ColumnDefinition Width="47*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
                                     Text="Made with       by e-verse" 
                                     Margin="0,1,5,-1"
                                     FontWeight="Bold" Grid.ColumnSpan="2">
-                                </TextBlock>
+                                    </TextBlock>
 
-                                <Image Name="heartImage" 
+                                    <Image Name="heartImage" 
                                        Visibility="Visible" 
                                        Source="/e-verse.Navisworks.ViewpointByLevel;component/Resources/Heart.png"
                                        HorizontalAlignment="Left"
@@ -140,34 +128,34 @@
                                        RenderOptions.BitmapScalingMode="HighQuality" 
                                        RenderOptions.EdgeMode="Aliased" 
                                        Margin="63,0,0,3" RenderTransformOrigin="0.5,0.5">
-                                    <Image.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform ScaleY="1"/>
-                                            <SkewTransform/>
-                                            <RotateTransform/>
-                                            <TranslateTransform/>
-                                        </TransformGroup>
-                                    </Image.RenderTransform>
-                                </Image>
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers >
-                            <Trigger Property="IsDefaulted" Value="True">
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleY="1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers >
+                                <Trigger Property="IsDefaulted" Value="True">
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity"  TargetName="border" Value="0.5"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Opacity"  TargetName="border" Value="0.2"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
-        </Grid>
-    </Border>
-
+            </Grid>
+        </Border>
+    </Viewbox>
     <wixsharp:WpfDialog.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
