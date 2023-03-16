@@ -79,7 +79,7 @@
                     Text="May the force of this addon be with you."/>
                 <ProgressBar
                 Style="{DynamicResource ProgressBarStyle}" 
-                Margin="122,237,115,162"
+                Margin="122,237,115,175"
                 VerticalContentAlignment="Center"
                 Maximum="100"
                 Value="{Binding ProgressValue}" RenderTransformOrigin="0.5,0.5" >
