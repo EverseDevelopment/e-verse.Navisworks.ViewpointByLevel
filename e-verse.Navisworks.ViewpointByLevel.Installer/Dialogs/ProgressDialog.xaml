@@ -22,7 +22,7 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
 
-            <Grid x:Name="Root" Background="Transparent" Margin="-1,0,-1,0">
+            <Grid x:Name="Root" Background="Transparent">
 
                 <Button 
                     Style="{DynamicResource CloseButtonStyle}" 
@@ -77,10 +77,9 @@
                     FontSize="16"
                     FontWeight="ExtraLight"
                     Text="May the force of this addon be with you."/>
-
                 <ProgressBar
                 Style="{DynamicResource ProgressBarStyle}" 
-                Margin="122,237,115,162"
+                Margin="122,237,115,175"
                 VerticalContentAlignment="Center"
                 Maximum="100"
                 Value="{Binding ProgressValue}" RenderTransformOrigin="0.5,0.5" >
@@ -94,23 +93,25 @@
                     </ProgressBar.RenderTransform>
                 </ProgressBar>
 
+
                 <Button Style="{DynamicResource MainButtonStyle}"   
                     x:Name="GoNext"
                     Content="Next"
                     MinWidth="73"
-                    IsEnabled="False" Margin="303,302,33,74">
+                    IsEnabled="False" Height="NaN" Margin="288,300,48,84">
                 </Button>
 
                 <Button Style="{DynamicResource MainButtonStyle}"   
                     x:Name="Cancel"
                     Content="Cancel"
                     MinWidth="73" 
-                    Margin="35,302,290,74">
+                        Height="NaN"
+                    Margin="48,300,277,84">
                 </Button>
 
                 <Button
                     Style="{DynamicResource CloseButtonStyle}"
-                    Margin="332,376,13,0"
+                    Margin="335,382,20,20"
                     Background="Transparent"
                     Click="Title_Link"
                     FontWeight="Light"
