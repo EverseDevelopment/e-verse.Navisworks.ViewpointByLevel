@@ -22,7 +22,7 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch">
 
-            <Grid x:Name="Root" Background="Transparent" Margin="-1,0,-1,0">
+            <Grid x:Name="Root" Background="Transparent">
 
                 <Button 
                     Style="{DynamicResource CloseButtonStyle}" 
@@ -68,13 +68,12 @@
 
                 <Button
                     Style="{DynamicResource CloseButtonStyle}"
-                    Margin="332,376,13,0"
+                    Margin="335,382,20,20"
                     Background="Transparent"
                     Click="Contact_Link"
                     FontWeight="Light"
                     FontSize="12"     
-                    Foreground="{DynamicResource MainGray}"
-                    VerticalAlignment="Top" Height="20">
+                    Foreground="{DynamicResource MainGray}" Height="NaN">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="border"  Background="Transparent" Margin="0,0,3,0">
@@ -208,15 +207,14 @@
                     x:Name="GoExit"
                     Content="Finish"
                     MinWidth="73" 
-                    Margin="181,302,181,0" 
-                    VerticalAlignment="Top">
-                </Button>
+                        Height="NaN"
+                    Margin="164,300,164,84"/>
 
                 <Button 
                    Style="{DynamicResource TabCloseButtonStyle}"
                    Name="Cancel"
                    VerticalAlignment="Top" 
-                   Margin="452,13,17,0"/>
+                   Margin="465,13,17,0"/>
 
             </Grid>
         </Border>
