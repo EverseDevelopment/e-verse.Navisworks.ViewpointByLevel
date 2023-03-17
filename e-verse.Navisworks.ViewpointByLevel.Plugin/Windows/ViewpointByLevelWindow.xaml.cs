@@ -29,18 +29,15 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             InitializeComponent();
             InitializeValues();
         }
-        private void InitializeValues()
-        {
-            versionLabel.Content = string.Concat("v.", PRODUCT_VERSION);
-            LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
-        }
 
-        private void LoadImage(Image image, string imagePath)
+        public void CreateViewpoint(string elev, string displayName, View aView)
         {
-            string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
-            string fullPath = System.IO.Path.Combine(commonProjectDirectory, imagePath);
-            Uri uri = new Uri(fullPath);
-            image.Source = new BitmapImage(uri);
+            Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+            aView.TrySetClippingPlanes(elev);
+            Console.Write(elev + Environment.NewLine);
+            SavedViewpoint newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
+            newViewpoint.DisplayName = displayName;
+            oDoc.SavedViewpoints.AddCopy(newViewpoint);
         }
         private void Apply_Button(object sender, RoutedEventArgs e)
         {
@@ -69,24 +66,39 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
         }
-        public void FillUnits()
-        {
-            modelUnits.Items.Add(Units.Meters.ToString());
-            modelUnits.Items.Add(Units.Feet.ToString());
-            modelUnits.Items.Add(Units.Inches.ToString());
 
-        }
         private void FinDisclaimerButtonChildImage(object sender, RoutedEventArgs e)
         {
             Button disclaimerButton = sender as Button;
             if (disclaimerButton != null)
             {
-                Image heartImage = disclaimerButton.Template.FindName("heartImage", disclaimerButton) as Image;
-                if (heartImage != null)
-                {
-                    LoadImage(heartImage, HEART_IMAGE_PATH);
-                }
+
+                Image disclaimerImage = FindChild<Image>(disclaimerButton, "heartImage");
+                LoadImage(disclaimerImage, HEART_IMAGE_PATH);
             }
+        }
+        private T FindChild<T>(DependencyObject parent, string childName) where T : DependencyObject
+        {
+            // Check if parent is null
+            if (parent == null) return null;
+
+            // Check if parent is the child we're looking for
+            var frameworkElement = parent as FrameworkElement;
+            if (frameworkElement != null && frameworkElement.Name == childName)
+            {
+                return parent as T;
+            }
+
+            // Recursively search for the child
+            int numChildren = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < numChildren; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                var result = FindChild<T>(child, childName);
+                if (result != null) return result;
+            }
+
+            return null;
         }
         private void OffOn(bool toggle, string message, System.Windows.Media.Color color)
         {
@@ -97,6 +109,32 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             textBox.IsEnabled = toggle;
             notificationField.Content = message;
             notificationField.Foreground = new SolidColorBrush(color);
+        }
+        private void InitializeValues()
+        {
+            versionLabel.Content = string.Concat("v.", PRODUCT_VERSION);
+            LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
+        }
+
+        private void LoadImage(Image image, string imagePath)
+        {
+            string fullPath = GetImagePath(imagePath);
+            Uri uri = new Uri(fullPath);
+            image.Source = new BitmapImage(uri);
+        }
+
+        private static string GetImagePath(string imagePath)
+        {
+            string commonProjectDirectory = System.IO.Path.GetDirectoryName(typeof(PluginRibbon).Assembly.Location);
+            string fullPath = System.IO.Path.Combine(commonProjectDirectory, imagePath);
+            return fullPath;
+        }
+        public void FillUnits()
+        {
+            modelUnits.Items.Add(Units.Meters.ToString());
+            modelUnits.Items.Add(Units.Feet.ToString());
+            modelUnits.Items.Add(Units.Inches.ToString());
+
         }
         private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -111,15 +149,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         {
             this.DialogResult = false;
         }
-        public void CreateViewpoint(string elev, string displayName, View aView)
-        {
-            Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
-            aView.TrySetClippingPlanes(elev);
-            Console.Write(elev + Environment.NewLine);
-            SavedViewpoint newViewpoint = new SavedViewpoint(oDoc.CurrentViewpoint);
-            newViewpoint.DisplayName = displayName;
-            oDoc.SavedViewpoints.AddCopy(newViewpoint);
-        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
