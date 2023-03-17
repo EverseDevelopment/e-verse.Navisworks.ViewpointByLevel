@@ -45,7 +45,7 @@
                 Visibility="Visible"
                 HorizontalAlignment="Left"
                 Width="135"
-                Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\ViewpointByLevel.png"
+                Source="ViewpointByLevel.png"
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderOptions.EdgeMode="Aliased"
@@ -118,7 +118,7 @@
         VerticalContentAlignment="Stretch" Margin="144,424,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169">
                 <DockPanel LastChildFill="True">
                     <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Left">Made with</Label>
-                    <Image x:Name="heartImage" Source="C:\Users\silic\Documents\GitHub\e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.Common\Images\Heart.jpg" Width="24" />
+                    <Image x:Name="heartImage" Source="Heart.jpg" Width="24" />
                     <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Right" Content="by e-verse"/>
                 </DockPanel>
             </Button>
