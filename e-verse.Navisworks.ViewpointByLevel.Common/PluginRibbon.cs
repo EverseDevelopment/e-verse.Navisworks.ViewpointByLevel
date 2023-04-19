@@ -9,10 +9,10 @@ using System.Windows;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Common
 {
-    [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName = "Veronica")]
+    [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName = "Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
     [RibbonTab("VPByLevel")]
-    [Command("VPByLevel", LargeIcon = "VL_32.jpg", ToolTip = "\nVeronica is a Viewpoint by Level add-in for Autodesk® Navisworks®. It allows users to quickly and easily create viewpoints based on a selected level of a Revit model.", DisplayName = "Veronica")]
+    [Command("VPByLevel", LargeIcon = "VL_32.jpg", ToolTip = "Create viewpoint by level\n\nVeronica is a Viewpoint by Level add-in for Autodesk® Navisworks®. It allows users to quickly and easily create viewpoints based on a selected level of a Revit model.", DisplayName = "Viewpoint by Level")]
 
     class PluginRibbon : CommonCommandHandlerPlugin
     {
