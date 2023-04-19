@@ -129,7 +129,7 @@
                 Margin="0,23,49,0"
                 Content="v.1.0.0"
                 VerticalAlignment="Top"
-                Width="42" Height="20" FontSize="15" />
+                Width="59" Height="20" FontSize="15" />
             <Label Style="{DynamicResource PrimaryTitleLabel}" Content="Viewpoint By Level" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" />
             <Line Style="{DynamicResource DashedLine}"
                 Margin="22,186,22,0"/>
