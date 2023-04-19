@@ -12,10 +12,11 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common
     [Plugin("VPByLevelRibbon", IdentityInformation.DeveloperID, DisplayName = "Viewpoint by Level")]
     [RibbonLayout("PluginRibbon.xaml")]
     [RibbonTab("VPByLevel")]
-    [Command("VPByLevel", LargeIcon = "VL_32.jpg", ToolTip = "Viewpoint by level", DisplayName = "Viewpoint by Level")]
+    [Command("VPByLevel", LargeIcon = "VL_32.jpg", ToolTip = "Create viewpoint by level\n\nVeronica is a Viewpoint by Level add-in for Autodesk® Navisworks®. It allows users to quickly and easily create viewpoints based on a selected level of a Revit model.", DisplayName = "Viewpoint by Level")]
 
     class PluginRibbon : CommonCommandHandlerPlugin
     {
+        public const string VERONICA = "veronica";
         public override int ExecuteCommand(string name, params string[] parameters)
         {
             string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -43,6 +44,12 @@ namespace EVerse.Navisworks.ViewpointByLevel.Common
                     break;
             }
             return 0;
+        }
+
+        public override bool TryShowCommandHelp(string name)
+        {
+            bool result = base.TryShowCommandHelp($"https://e-verse.com/{VERONICA}");
+            return result;
         }
     }
 }
