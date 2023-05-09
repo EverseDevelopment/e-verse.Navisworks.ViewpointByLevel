@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-verse.Navisworks.Viewpoin
 		{EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD} = {EF82B2C7-EF50-4CF2-B75A-28F6FB3303CD}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-verse.Navisworks.ViewpointByLevel.2024", "e-verse.Navisworks.ViewpointByLevel.2024\e-verse.Navisworks.ViewpointByLevel.2024.csproj", "{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,6 +114,14 @@ Global
 		{1712F7FB-8F8E-4DBA-BB4C-A5475B716001}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1712F7FB-8F8E-4DBA-BB4C-A5475B716001}.Release|x86.ActiveCfg = Release|Any CPU
 		{1712F7FB-8F8E-4DBA-BB4C-A5475B716001}.Release|x86.Build.0 = Release|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Debug|x86.Build.0 = Debug|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Release|x86.ActiveCfg = Release|Any CPU
+		{DAAD557E-DA1A-47F7-B45D-7CE63BF77A44}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +141,8 @@ Global
 		e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems*{944d393f-9bb3-4c5f-9566-baaa4745a2ca}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{944d393f-9bb3-4c5f-9566-baaa4745a2ca}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{a935471b-241f-4256-a392-94148591e4f3}*SharedItemsImports = 13
+		e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems*{daad557e-da1a-47f7-b45d-7ce63bf77a44}*SharedItemsImports = 4
+		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{daad557e-da1a-47f7-b45d-7ce63bf77a44}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Common\e-verse.Navisworks.ViewpointByLevel.Common.projitems*{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}*SharedItemsImports = 4
 		e-verse.Navisworks.ViewpointByLevel.Plugin\e-verse.Navisworks.ViewpointByLevel.Plugin.projitems*{ef82b2c7-ef50-4cf2-b75a-28f6fb3303cd}*SharedItemsImports = 4
 	EndGlobalSection
