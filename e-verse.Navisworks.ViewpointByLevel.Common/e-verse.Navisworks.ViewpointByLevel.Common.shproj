@@ -24,7 +24,6 @@
     <Compile Include="Utils\PluginBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="e-verse.Navisworks.ViewpointByLevel.addin" />
     <Content Include="Images\Heart.jpg" />
     <Content Include="Images\ViewpointByLevel.png" />
     <Content Include="Images\VL_32.jpg" />

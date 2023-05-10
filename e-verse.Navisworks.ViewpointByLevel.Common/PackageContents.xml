@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ApplicationPackage SchemaVersion="1.0"
 					AutodeskProduct="Naviswork"
-					Name="e-verse ViewpointByLevel Plugin"
+					Name="Veronica ViewpointByLevel"
 					Description="Viewpoint By Level"
 					AppVersion="1.0.0.0"
 					ProductType="Application"
@@ -17,26 +17,26 @@
 	<CompanyDetails Name="e-verse" Url="http://www.e-verse.com" Email="contact@e-verse.com" Phone=" " />
 	<Components Description="2018">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw15" SeriesMax="Nw15" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2018/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2018/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 	<Components Description="2019">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw16" SeriesMax="Nw16" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2019/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2019/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 	<Components Description="2020">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw17" SeriesMax="Nw17" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2020/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2020/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 	<Components Description="2021">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw18" SeriesMax="Nw18" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2021/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2021/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 	<Components Description="2022">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw19" SeriesMax="Nw19" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2022/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2022/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 	<Components Description="2023">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw20" SeriesMax="Nw20" />
-		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2023/e-verse.Navisworks.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
+		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2023/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
 </ApplicationPackage>

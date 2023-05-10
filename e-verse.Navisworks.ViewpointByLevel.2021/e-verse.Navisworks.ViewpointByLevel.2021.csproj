@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EVerse.Navisworks.ViewpointByLevel</RootNamespace>
-    <AssemblyName>e-verse.Navisworks.ViewpointByLevel</AssemblyName>
+    <AssemblyName>Veronica.ViewpointByLevel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
