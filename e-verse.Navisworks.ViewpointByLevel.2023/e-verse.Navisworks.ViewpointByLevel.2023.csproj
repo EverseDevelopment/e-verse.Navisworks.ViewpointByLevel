@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EVerse.Navisworks.ViewpointByLevel</RootNamespace>
-    <AssemblyName>e-verse.Navisworks.ViewpointByLevel</AssemblyName>
+    <AssemblyName>Veronica.ViewpointByLevel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -131,7 +131,7 @@ mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2023\Images"
 
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\Images"
-copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\*.addin" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
+
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023\en-US"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Plugin\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2023"
 
