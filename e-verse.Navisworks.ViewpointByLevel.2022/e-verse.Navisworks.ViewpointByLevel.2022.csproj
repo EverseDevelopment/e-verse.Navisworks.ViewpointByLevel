@@ -125,7 +125,6 @@
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2022\en-US"
 mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2022\Images"
-
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022\Images"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\*.addin" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2022"
