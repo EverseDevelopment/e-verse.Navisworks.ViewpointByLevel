@@ -93,18 +93,14 @@
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2024\en-US"
 mkdir "$(SolutionDir)\$(SolutionName).bundle\Contents\dlls\2024\Images"
-
 copy "$(TargetDir)\*.dll" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2024"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\Images\*" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2024\Images"
-copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\*.addin" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2024"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2024\en-US"
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Plugin\clipPlaneTemplate.json" "$(SolutionDir)$(SolutionName).bundle\Contents\dlls\2024"
-
 copy "$(SolutionDir)\e-verse.Navisworks.ViewpointByLevel.Common\PackageContents.xml" "$(SolutionDir)$(SolutionName).bundle"
 
 if EXIST "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle" rmdir /s /q "%25AppData%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
 if $(ConfigurationName) == Debug mkdir "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"
-
 if $(ConfigurationName) == Debug xcopy /e /s /h "$(SolutionDir)\$(SolutionName).bundle" "%25APPDATA%25\Autodesk\ApplicationPlugins\$(SolutionName).bundle"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -10,7 +10,7 @@ using System.Globalization;
 
 namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 {
-    [Plugin("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoints by Level", DisplayName = "Viewpoints by Level")]
+    [Plugin("VPByLevel", IdentityInformation.DeveloperID, ToolTip = "Viewpoint by Level", DisplayName = "Veronica")]
     public class ViewpointByLevelPlugin : CustomPlugin
     {
         public int Execute(params string[] parameters)
@@ -41,7 +41,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
 
                     //Model Origin
                     double originZ = gSystems[Tools.SelectedSystem].Origin.Z;
-                    
+
                     foreach (GridLevel level in gSystems[Tools.SelectedSystem].Levels)
                     {
                         double elevation = -originZ - level.Elevation - recomputedOffset;

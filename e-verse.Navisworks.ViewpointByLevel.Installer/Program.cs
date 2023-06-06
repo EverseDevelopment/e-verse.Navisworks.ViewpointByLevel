@@ -61,6 +61,14 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
                                 new Dir(@"en-US",
                                     new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
                                     new Dir(@"Images",
+                                        new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*"))),
+                              new Dir(@"2024",
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.2024\bin\Release\Veronica.ViewpointByLevel.dll"),
+                                new File(@"..\e-verse.Navisworks.ViewpointByLevel.Plugin\ClipPlaneTemplate.json"),
+
+                                new Dir(@"en-US",
+                                    new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\en-US\PluginRibbon.xaml")),
+                                    new Dir(@"Images",
                                         new Files(@"..\e-verse.Navisworks.ViewpointByLevel.Common\Images\*.*")))
                               )))));
 
