@@ -11,7 +11,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
         {
             var project = new ManagedProject("e-verse.Navisworks.ViewpointByLevel",
                               new Dir(@"%AppData%\Autodesk\ApplicationPlugins",
-                              new Dir(@"e-verse.Navisworks.ViewpointByLevel.bundle",
+                              new Dir(@"Veronica.ViewpointByLevel.bundle",
                               new File(@"..\e-verse.Navisworks.ViewpointByLevel.Common\PackageContents.xml"),
                               new Dir(@"Contents", new Dir(@"dlls",
                               new Dir(@"2018",
@@ -101,7 +101,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Installer
             {
                 Primary = { FileName = msiFile },
 
-                OutputFile = "e-verse.Navisworks.ViewpointByLevel.exe",
+                OutputFile = "Veronica.ViewpointByLevel.exe",
                 IconFile = "Resources\\logo.ico",
 
                 VersionInfo = new VersionInformation("1.0.0.0")
