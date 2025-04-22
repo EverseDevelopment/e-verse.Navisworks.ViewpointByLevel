@@ -47,7 +47,7 @@
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw22" SeriesMax="Nw22" />
 		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2025/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>
-	<Components Description="2024">
+	<Components Description="2026">
 		<RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw23" SeriesMax="Nw23" />
 		<ComponentEntry AppName="Viewpoint By Level for Autodesk® Navisworks®" AppType="ManagedPlugin" Version="1.0.0.0" ModuleName="./Contents/dlls/2026/Veronica.ViewpointByLevel.dll" AppDescription="Viewpoint By Level." />
 	</Components>

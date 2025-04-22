@@ -36,12 +36,15 @@
     </Reference>
     <Reference Include="Autodesk.Navisworks.Api, Version=22.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\Autodesk.Navisworks.Api.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.ComApi, Version=22.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\Autodesk.Navisworks.ComApi.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Controls, Version=22.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\Autodesk.Navisworks.Controls.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Interop.ComApi, Version=22.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
@@ -49,12 +52,15 @@
     </Reference>
     <Reference Include="navisworks.gui.common, Version=22.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\navisworks.gui.common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="navisworks.gui.interface, Version=22.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\navisworks.gui.interface.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="navisworks.gui.roamer, Version=22.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\Speckle.Navisworks.API.2025.0.0\lib\net48\navisworks.gui.roamer.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
