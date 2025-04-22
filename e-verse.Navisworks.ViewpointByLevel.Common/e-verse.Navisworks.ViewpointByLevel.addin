@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<NavisworksAddIns>
+	<AddIn Type="Application">
+		<Name>e-verse.Navisworks.ViewpointByLevel</Name>
+		<Assembly>e-verse.Navisworks.ViewpointByLevel\e-verse.Navisworks.ViewpointByLevel.dll</Assembly>
+		<FullClassName>e-verse.Navisworks.ViewpointByLevel.Plugin.ViewpointByLevelPlugin</FullClassName>
+		<Text>e-verse.Navisworks.ViewpointByLevel</Text>
+		<Description>e-verse.Navisworks.ViewpointByLevel</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<AddInId>
+			9F671DF3-B6CB-49E0-9EDE-871A80855619
+		</AddInId>
+		<VendorId>EVRS</VendorId>
+		<VendorDescription>e-verse, www.e-verse.com</VendorDescription>
+	</AddIn>
+</NavisworksAddIns>

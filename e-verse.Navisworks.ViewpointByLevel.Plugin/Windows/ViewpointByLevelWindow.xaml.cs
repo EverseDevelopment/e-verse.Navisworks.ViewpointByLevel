@@ -3,6 +3,7 @@ using EVerse.Navisworks.ViewpointByLevel.Common;
 using EVerse.Navisworks.ViewpointByLevel.Plugin.Utils;
 using System;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -21,13 +22,15 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         private const string SELECT_REVIT_MODEL_MESSAGE = "Select a revit model";
         private const string ADDIN_IMAGE_PATH = "Images\\ViewpointByLevel.png";
         private const string HEART_IMAGE_PATH = "Images\\Heart.jpg";
-        public const string PRODUCT_VERSION = "1.0.19";
+        public const string PRODUCT_VERSION = "1.0.20";
         private int SelectedUnits { get; set; }
 
         public ViewpointByLevelWindow()
         {
             InitializeComponent();
             InitializeValues();
+            FillUnits();
+            textBox.Text = "0";
         }
 
         public void CreateViewpoint(string elev, string displayName, View aView)
@@ -41,6 +44,12 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
         }
         private void Apply_Button(object sender, RoutedEventArgs e)
         {
+            if (modelsNames.Text == "")
+            {
+                MessageWindow.Show("Alert", "Please Select a Model First");
+                return;
+            }
+
             try
             {
                 Tools.CutOffset = Convert.ToDouble(textBox.Text, CultureInfo.InvariantCulture);
@@ -61,8 +70,8 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
                 {
                     modelsNames.Items.Add(model);
                 }
-                textBox.Text = "0";
                 OffOn(true, SELECT_REVIT_MODEL_MESSAGE, Colors.Gray);
+                modelsNames.SelectedIndex = 0;
             }
             else OffOn(false, NO_REVIT_MODEL_MESSAGE, Colors.Red);
         }
@@ -107,13 +116,10 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             modelUnits.IsEnabled = toggle;
             applyButton.IsEnabled = toggle;
             textBox.IsEnabled = toggle;
-            notificationField.Content = message;
-            notificationField.Foreground = new SolidColorBrush(color);
         }
         private void InitializeValues()
         {
             versionLabel.Content = string.Concat("v.", PRODUCT_VERSION);
-            LoadImage(ComponentImage, ADDIN_IMAGE_PATH);
         }
 
         private void LoadImage(Image image, string imagePath)
@@ -134,6 +140,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             modelUnits.Items.Add(Units.Meters.ToString());
             modelUnits.Items.Add(Units.Feet.ToString());
             modelUnits.Items.Add(Units.Inches.ToString());
+            modelUnits.SelectedIndex = 0;
 
         }
         private void Model_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -159,5 +166,35 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin.Windows
             System.Diagnostics.Process.Start("https://e-verse.com/");
         }
 
+        private void Pris_Link(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://apps.autodesk.com/NAVIS/es/Detail/Index?id=601211669573384953&appLang=en&os=Win64");
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextNumeric(e.Text);
+        }
+
+        private void TextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            if (e.DataObject.GetDataPresent(DataFormats.Text))
+            {
+                string pastedText = e.DataObject.GetData(DataFormats.Text) as string;
+                if (!IsTextNumeric(pastedText))
+                {
+                    e.CancelCommand();
+                }
+            }
+            else
+            {
+                e.CancelCommand();
+            }
+        }
+
+        private bool IsTextNumeric(string text)
+        {
+            return Regex.IsMatch(text, @"^\d+$"); // only digits
+        }
     }
 }

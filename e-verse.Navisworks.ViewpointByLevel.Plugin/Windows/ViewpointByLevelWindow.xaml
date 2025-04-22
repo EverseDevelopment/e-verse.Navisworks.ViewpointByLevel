@@ -9,12 +9,13 @@
              Background="{x:Null}"
              mc:Ignorable="d"
              Width="350"
-             Height="520"
+             Height="620"
              Title="Viewpoint by level"
              ResizeMode="NoResize"
              Topmost="True"
              ShowInTaskbar="True"
              Style="{DynamicResource CustomWindowStyle}">
+
     <Window.InputBindings>
         <KeyBinding Key="Escape"
                     Command="Close" />
@@ -23,6 +24,7 @@
         <KeyBinding Gesture="F1"
                     Command="Help" />
     </Window.InputBindings>
+
     <Border
         x:Name="MainWindow_Border"
         Background="{DynamicResource BackgroundColor}"
@@ -38,101 +40,180 @@
                               ShadowDepth="0"
                               Direction="0"></DropShadowEffect>
         </Border.Effect>
-        <Grid>
+
+        <Grid Margin="20">
             <Grid>
 
-                <Image x:Name="ComponentImage"
-                Visibility="Visible"
-                HorizontalAlignment="Left"
-                Width="135"
-                Source="ViewpointByLevel.png"
-                SnapsToDevicePixels="True"
-                RenderOptions.BitmapScalingMode="HighQuality"
-                RenderOptions.EdgeMode="Aliased"
-                Margin="10,18,0,0" Height="28" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Button
-                   Style="{DynamicResource TabCloseButtonStyle}"
-                   Name="CloseButton"
-                   Click="Close_Button"
-                   VerticalAlignment="Top"
-                   Margin="288,18,10,0"></Button>
+                <Button Style="{DynamicResource MainTitleButtonStyle}"
+                    Background="Transparent" 
+                    BorderBrush="Transparent" 
+                    Click="Pris_Link" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Height="34" Width="168"  >
+                </Button>
+
+                <StackPanel  Orientation="Horizontal"
+                             VerticalAlignment="Top"
+                             HorizontalAlignment="Right">
+
+                    <Label x:Name="versionLabel"
+                       Style="{DynamicResource SecondaryLabel}"
+                       HorizontalAlignment="Right"
+                       Content="v.1.0.0"
+                       Width="50"
+                           Opacity="0.5"/>
+
+                    <Button Style="{DynamicResource TabCloseButtonStyle}"
+                        Click="Close_Button"/>
+
+                </StackPanel>
+
+
             </Grid>
             <Line Stroke="{DynamicResource MainGray}"
                   X2="1000"
                   Opacity="0.5"
                   StrokeThickness="4"
                   VerticalAlignment="Top"
-                  Margin="0,59,0,0" RenderTransformOrigin="0.5,0.5" Height="2">
+                  Margin="-9,55,-9,0" 
+                  RenderTransformOrigin="0.5,0.5" 
+                  Height="2">
                 <Line.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform ScaleY="1" />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
                     </TransformGroup>
                 </Line.RenderTransform>
             </Line>
 
-            <Label Style="{DynamicResource TitleLabels}" Content="Plane" HorizontalAlignment="Left" Margin="22,283,0,0" VerticalAlignment="Top" Width="164" />
-            <Label Style="{DynamicResource TitleLabels}" Content="Model" HorizontalAlignment="Left" Margin="23,106,0,0" VerticalAlignment="Top" Width="122" />
-            <ComboBox x:Name="modelsNames" HorizontalAlignment="Center" Height="34" Margin="0,139,0,0" VerticalAlignment="Top" Width="284" SelectionChanged="Model_SelectionChanged" />
-            <Label Style="{DynamicResource SecondaryLabel}" x:Name="notificationField" Content="Select a revit model" HorizontalAlignment="Left" Margin="41,144,0,0" VerticalAlignment="Top" Width="236" FontSize="12" FontWeight="Regular" />
-            <TextBox Style="{DynamicResource MainTextBox}" IsEnabled="False" x:Name="textBox" Height="34" Margin="104,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" />
-            <Label Style="{DynamicResource TitleLabels}" Content="Units" HorizontalAlignment="Left" Margin="22,190,0,0" VerticalAlignment="Top" Width="164" />
-            <Button Style="{DynamicResource ApplyButtonStyle}" x:Name="applyButton" IsEnabled="False" Content="Apply" Margin="96,383,96,0" VerticalAlignment="Top" Click="Apply_Button" Height="22" FontWeight="SemiBold" />
-            <ComboBox x:Name="modelUnits" HorizontalAlignment="Left" Height="34" Margin="104,226,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="Units_SelectionChanged" />
-            <Line Style="{DynamicResource DashedLine}"
-                  Margin="22,277,22,0"/>
-            <Label
-                Style="{DynamicResource SecondaryLabel}"
-                HorizontalAlignment="Left"
-                Margin="22,231,0,0"
-                Content="Model units:"
-                VerticalAlignment="Top"
-                Width="72" />
-            <Label
-                Style="{DynamicResource SecondaryLabel}"
-                HorizontalAlignment="Left"
-                Margin="22,323,0,0"
-                Content="Offset:"
-                VerticalAlignment="Top"
-                Width="72" />
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="0,80,0,0">
 
-            <Button
-                 Loaded="FinDisclaimerButtonChildImage"
-                Click="Title_Link"
-                Style="{DynamicResource CloseButtonStyle}"
-                BorderBrush="Transparent"
-                Background="Transparent"
-                Foreground="{DynamicResource MainGray}"
-        HorizontalContentAlignment="Stretch"
-        VerticalContentAlignment="Stretch" Margin="144,424,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169">
-                <DockPanel LastChildFill="True">
-                    <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Left">Made with</Label>
-                    <Image x:Name="heartImage" Source="Heart.jpg" Width="24" />
-                    <Label FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Right" Content="by e-verse"/>
-                </DockPanel>
+                <Label Style="{DynamicResource TitleLabels}" 
+                   Content="Model"/>
+
+                <ComboBox x:Name="modelsNames" 
+                      HorizontalAlignment="Center" 
+                      Margin="0,10,0,15" 
+                      VerticalAlignment="Top" 
+                      Width="284" 
+                      SelectionChanged="Model_SelectionChanged" />
+
+                <Line Style="{DynamicResource DashedLine}"
+                      Margin="{DynamicResource LinesMargin}"/>
+
+                <Label Style="{DynamicResource TitleLabels}" 
+                   Content="Units" />
+
+                <StackPanel  Orientation="Horizontal"
+                             HorizontalAlignment="Right"
+                             Margin="0,10,0,15">
+
+                    <Label Style="{DynamicResource SecondaryLabel}"
+                       Content="Model units:"
+                       VerticalAlignment="Center"
+                       Width="83" />
+
+                    <ComboBox x:Name="modelUnits" 
+                          VerticalAlignment="Center"
+                              HorizontalAlignment="Right"
+                              Margin="0"
+                          Width="204" 
+                          SelectionChanged="Units_SelectionChanged" />
+
+                </StackPanel>
+
+                <Line Style="{DynamicResource DashedLine}"
+                      Margin="{DynamicResource LinesMargin}"/>
+
+                <Label Style="{DynamicResource TitleLabels}" 
+                   Content="Plane"  />
+
+                <StackPanel  Orientation="Horizontal"
+                             HorizontalAlignment="Right"
+                             Margin="0,10,0,15">
+
+                    <Label Style="{DynamicResource SecondaryLabel}"
+                           Content="Offset:"
+                           Width="84" />
+
+                    <TextBox Style="{DynamicResource MainTextBox}" 
+                             IsEnabled="False" 
+                             x:Name="textBox" 
+                             Height="34" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             Width="204"
+                             PreviewTextInput="TextBox_PreviewTextInput"
+                             DataObject.Pasting="TextBox_Pasting"/>
+                </StackPanel>
+
+                <Button Style="{DynamicResource ApplyButtonStyle}" 
+                    x:Name="applyButton" 
+                    IsEnabled="False" 
+                    Content="Apply" 
+                    Margin="0,40,0,0" 
+                    VerticalAlignment="Top"
+                    Width="140"
+                    HorizontalAlignment="Center"
+                    Click="Apply_Button"
+                    Height="22" 
+                    FontWeight="SemiBold" />
+
+            </StackPanel>
+
+            <Button Style="{DynamicResource CloseButtonStyle}"
+                    Background="Transparent"
+                    Click="Title_Link"
+                    FontWeight="Light"
+                    FontSize="12"     
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom" 
+                    Height="22">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="Transparent" 
+                                Margin="0,0,3,0">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                                <!-- First Text -->
+                                <TextBlock Text="Made with"
+                               FontWeight="Bold"
+                               Margin="4,0,0,0"
+                               VerticalAlignment="Center"/>
+
+                                <!-- Heart Image -->
+                                <Viewbox Stretch="Uniform"
+                                         Margin="4,4,4,4">
+                                    <Path Style="{DynamicResource HeartLogo}"/>
+                                </Viewbox>
+
+                                <!-- Second Text -->
+                                <TextBlock Text="by e-verse"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="border" Value="0.5"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" TargetName="border" Value="0.2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
-            <Label
-                x:Name="versionLabel"
-                Style="{DynamicResource SecondaryLabel}"
-                HorizontalAlignment="Right"
-                Margin="0,23,49,0"
-                Content="v.1.0.0"
-                VerticalAlignment="Top"
-                Width="59" Height="20" FontSize="15" />
-            <Label Style="{DynamicResource PrimaryTitleLabel}" Content="Viewpoint By Level" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" />
-            <Line Style="{DynamicResource DashedLine}"
-                Margin="22,186,22,0"/>
+
+
         </Grid>
     </Border>
     <Window.Resources>
