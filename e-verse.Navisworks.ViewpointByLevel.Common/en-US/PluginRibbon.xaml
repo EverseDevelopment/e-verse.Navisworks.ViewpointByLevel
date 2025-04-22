@@ -13,13 +13,13 @@
 
 	<RibbonTab Id="VPByLevel" KeyTip="T1">
 		<RibbonPanel x:Uid="RibbonPane1_1">
-			<RibbonPanelSource x:Uid="RibbonPanelSource_RibbonPanel_1" KeyTip="C1" Title="Tools">
+			<RibbonPanelSource x:Uid="RibbonPanelSource_RibbonPanel_1" KeyTip="C1" Title="Viewpoint by Level">
 
 				<local:NWRibbonButton x:Uid="VPByLevel" Id="VPByLevel"
                             Size="Large"
                             KeyTip="B1"
                             ShowText="True"
-                            Text="Veronica - Viewpoint by Level"
+                            Text="Veronica"
                             Orientation="Vertical"/>
 			</RibbonPanelSource>
 		</RibbonPanel>

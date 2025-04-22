@@ -11,10 +11,17 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Tools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewpointByLevelPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Windows\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Windows\Resources.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Windows\ViewpointByLevelWindow.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Windows\MessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Windows\Resources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

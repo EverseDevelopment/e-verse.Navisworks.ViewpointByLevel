@@ -21,11 +21,16 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
             GridSystemCollection gSystems = oDoc.Grids.Systems;
             Tools.GridSystems gs = new Tools.GridSystems(gSystems);
             Tools.ModelUnits mu = new Tools.ModelUnits(oDoc);
+            
+            if (gs.Models.Count == 0)
+            {
+                MessageWindow.Show("Alert", "Please load a Revit model first");
+                return 0;
+            }
 
-            ViewpointByLevelWindow viewpointByLevelWindow = new ViewpointByLevelWindow();
+           ViewpointByLevelWindow viewpointByLevelWindow = new ViewpointByLevelWindow();
 
             viewpointByLevelWindow.FillModels(gs);
-            viewpointByLevelWindow.FillUnits();
             viewpointByLevelWindow.ShowDialog();
             //Exit plugin if user clicks cancel
             if (viewpointByLevelWindow.DialogResult == false)
@@ -50,6 +55,7 @@ namespace EVerse.Navisworks.ViewpointByLevel.Plugin
                     }
                     t.Commit();
                 }
+                MessageWindow.Show("Success", $"{gSystems[Tools.SelectedSystem].Levels.Count} viewpoints created succesfully");
             }
             return 0;
         }
