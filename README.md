@@ -27,7 +27,7 @@ Veronica - viewpoint by level is currently built against Navisworks 2018,2019,20
 ## Contributors
 This package is primarily managed by [E-verse](https://www.e-verse.co/) and by [People Like You™](https://github.com/EverseDevelopment/e-verse.Navisworks.ViewpointByLevel/pulse).
 
-## Help improve glTF exporter
+## Help improve Veronica viewpoint by level
 If you're interested in contributing to Veronica Viewpoint by Level, just submit a [pull request](https://github.com/EverseDevelopment/e-verse.Navisworks.ViewpointByLevel/pulls) or a [feature request](https://github.com/EverseDevelopment/e-verse.Navisworks.ViewpointByLevel/issues) .
 
 ## Installation
